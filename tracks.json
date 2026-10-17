@@ -1,0 +1,19 @@
+{
+  "updated": "2026-10-18",
+  "slots": [
+    { "id": "day",   "label": "afternoon · 카페 오후",     "from": 11, "to": 17, "playlists": ["study", "focus", "weekend"] },
+    { "id": "wine",  "label": "wine o'clock · 첫 잔",      "from": 17, "to": 21, "playlists": ["wine", "weekend"] },
+    { "id": "night", "label": "late night · 모임과 혼술",  "from": 21, "to": 27, "playlists": ["friends", "alone", "wine"] }
+  ],
+  "tracks": [
+    {
+      "id": "2026-10-16-the-day",
+      "title": "하루 · the day",
+      "file": "music/the-day.m4a",
+      "playlists": ["wine", "study", "alone"],
+      "gain": 1.0,
+      "suno": "TSB 하루 · the day (v6, 3:24)",
+      "added": "2026-10-18"
+    }
+  ]
+}
