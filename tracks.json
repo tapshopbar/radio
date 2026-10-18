@@ -1,16 +1,121 @@
 {
-  "updated": "2026-10-18",
+  "updated": "2026-10-19",
   "slots": [
-    { "id": "day",   "label": "afternoon · 카페 오후",     "from": 11, "to": 17, "playlists": ["study", "focus", "weekend"] },
-    { "id": "wine",  "label": "wine o'clock · 첫 잔",      "from": 17, "to": 21, "playlists": ["wine", "weekend"] },
-    { "id": "night", "label": "late night · 모임과 혼술",  "from": 21, "to": 27, "playlists": ["friends", "alone", "wine"] }
+    {
+      "id": "day",
+      "label": "afternoon · 카페 오후",
+      "from": 11,
+      "to": 17,
+      "playlists": [
+        "study",
+        "focus",
+        "weekend"
+      ]
+    },
+    {
+      "id": "wine",
+      "label": "wine o'clock · 첫 잔",
+      "from": 17,
+      "to": 21,
+      "playlists": [
+        "wine",
+        "weekend"
+      ]
+    },
+    {
+      "id": "night",
+      "label": "late night · 모임과 혼술",
+      "from": 21,
+      "to": 27,
+      "playlists": [
+        "friends",
+        "alone",
+        "wine"
+      ]
+    }
   ],
   "tracks": [
-    { "id": "2026-10-16-the-day", "title": "하루 · the day", "file": "music/the-day.m4a", "playlists": ["wine", "study", "alone"], "gain": 1.0, "suno": "TSB 하루 · the day (v6, 3:24)", "added": "2026-10-18" },
-    { "id": "2026-10-18-3pm", "title": "오후 세 시 · 3pm", "file": "music/3pm.m4a", "playlists": ["study", "focus"], "gain": 1.0, "suno": "TSB 오후 세 시 · 3pm (v6, lo-fi jazz 82 BPM)", "added": "2026-10-18" },
-    { "id": "2026-10-18-window-seat", "title": "창가 자리 · window seat", "file": "music/window-seat.m4a", "playlists": ["weekend", "study"], "gain": 1.0, "suno": "TSB 창가 자리 · window seat (v6, bossa nova 92 BPM)", "added": "2026-10-18" },
-    { "id": "2026-10-18-first-glass", "title": "첫 잔 · first glass", "file": "music/first-glass.m4a", "playlists": ["wine"], "gain": 1.0, "suno": "TSB 첫 잔 · first glass (v6, jazz house 104 BPM)", "added": "2026-10-18" },
-    { "id": "2026-10-18-bubbles", "title": "버블 · bubbles", "file": "music/bubbles.m4a", "playlists": ["wine", "friends"], "gain": 1.0, "suno": "TSB 버블 · bubbles (v6, city pop 108 BPM)", "added": "2026-10-18" },
-    { "id": "2026-10-18-friday-night", "title": "금요일 밤 · friday night", "file": "music/friday-night.m4a", "playlists": ["friends"], "gain": 1.0, "suno": "TSB 금요일 밤 · friday night (v6, nu-disco 118 BPM)", "added": "2026-10-18" }
+    {
+      "id": "2026-10-16-the-day",
+      "title": "하루 · the day",
+      "file": "music/the-day.m4a",
+      "playlists": [
+        "wine",
+        "study",
+        "alone"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 하루 · the day (v6, 3:24)",
+      "added": "2026-10-18"
+    },
+    {
+      "id": "2026-10-18-3pm",
+      "title": "오후 세 시 · 3pm",
+      "file": "music/3pm.m4a",
+      "playlists": [
+        "study",
+        "focus"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 오후 세 시 · 3pm (v6, lo-fi jazz 82 BPM)",
+      "added": "2026-10-18"
+    },
+    {
+      "id": "2026-10-18-window-seat",
+      "title": "창가 자리 · window seat",
+      "file": "music/window-seat.m4a",
+      "playlists": [
+        "weekend",
+        "study"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 창가 자리 · window seat (v6, bossa nova 92 BPM)",
+      "added": "2026-10-18"
+    },
+    {
+      "id": "2026-10-18-first-glass",
+      "title": "첫 잔 · first glass",
+      "file": "music/first-glass.m4a",
+      "playlists": [
+        "wine"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 첫 잔 · first glass (v6, jazz house 104 BPM)",
+      "added": "2026-10-18"
+    },
+    {
+      "id": "2026-10-18-bubbles",
+      "title": "버블 · bubbles",
+      "file": "music/bubbles.m4a",
+      "playlists": [
+        "wine",
+        "friends"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 버블 · bubbles (v6, city pop 108 BPM)",
+      "added": "2026-10-18"
+    },
+    {
+      "id": "2026-10-18-friday-night",
+      "title": "금요일 밤 · friday night",
+      "file": "music/friday-night.m4a",
+      "playlists": [
+        "friends"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 금요일 밤 · friday night (v6, nu-disco 118 BPM)",
+      "added": "2026-10-18"
+    },
+    {
+      "id": "2026-10-19-wine-glow",
+      "title": "와인빛 · wine glow",
+      "file": "music/wine-glow.m4a",
+      "playlists": [
+        "friends"
+      ],
+      "gain": 0.9,
+      "suno": "TSB 와인빛 · wine glow (v6, K-pop electropop 128 BPM, vocal, 2:47)",
+      "added": "2026-10-19"
+    }
   ]
 }
