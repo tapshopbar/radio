@@ -116,6 +116,29 @@
       "gain": 0.9,
       "suno": "TSB 와인빛 · wine glow (v6, K-pop electropop 128 BPM, vocal, 2:47)",
       "added": "2026-10-19"
+    },
+    {
+      "id": "2026-10-19-underline",
+      "title": "밑줄 · underline",
+      "file": "music/underline.m4a",
+      "playlists": [
+        "study",
+        "focus"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 밑줄 · underline (v6, lo-fi jazz hop + bossa 80 BPM, 3:10)",
+      "added": "2026-10-19"
+    },
+    {
+      "id": "2026-10-19-six-thirty",
+      "title": "여섯 시 반 · six thirty",
+      "file": "music/six-thirty.m4a",
+      "playlists": [
+        "wine"
+      ],
+      "gain": 0.9,
+      "suno": "TSB 여섯 시 반 · six thirty (v6, R&B/neo-soul 88 BPM, vocal KR, 2:43)",
+      "added": "2026-10-19"
     }
   ]
 }
