@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "slots": [
     {
       "id": "day",
@@ -139,6 +139,30 @@
       "gain": 0.9,
       "suno": "TSB 여섯 시 반 · six thirty (v6, R&B/neo-soul 88 BPM, vocal KR, 2:43)",
       "added": "2026-10-19"
+    },
+    {
+      "id": "2026-10-20-focal-point",
+      "title": "초점 · focal point",
+      "file": "music/focal-point.m4a",
+      "playlists": [
+        "focus",
+        "study"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 초점 · focal point (v6, lo-fi jazz + bossa 84 BPM, v2 3:18)",
+      "added": "2026-10-20"
+    },
+    {
+      "id": "2026-10-20-seoul-lights",
+      "title": "서울 불빛 · seoul lights",
+      "file": "music/seoul-lights.m4a",
+      "playlists": [
+        "wine",
+        "friends"
+      ],
+      "gain": 0.9,
+      "suno": "TSB 서울 불빛 · seoul lights (v6, 80s city pop 104 BPM, vocal EN, v1 2:43)",
+      "added": "2026-10-20"
     }
   ]
 }
