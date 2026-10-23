@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20",
+  "updated": "2026-10-23",
   "slots": [
     {
       "id": "day",
@@ -163,6 +163,82 @@
       "gain": 0.9,
       "suno": "TSB 서울 불빛 · seoul lights (v6, 80s city pop 104 BPM, vocal EN, v1 2:43)",
       "added": "2026-10-20"
+    },
+    {
+      "id": "2026-10-23-clink",
+      "title": "짠 · clink",
+      "file": "music/clink.m4a",
+      "playlists": [
+        "friends"
+      ],
+      "gain": 1.0,
+      "added": "2026-10-23"
+    },
+    {
+      "id": "2026-10-23-our-usual-spot",
+      "title": "우리 자리 · our usual spot",
+      "file": "music/our-usual-spot.m4a",
+      "playlists": [
+        "friends",
+        "wine"
+      ],
+      "gain": 0.9,
+      "added": "2026-10-23"
+    },
+    {
+      "id": "al-01-rainy-window",
+      "title": "비 오는 창가 · rainy window",
+      "file": "music/al-rainy-window.m4a",
+      "playlists": [
+        "alone",
+        "wine"
+      ],
+      "gain": 0.9,
+      "added": "2026-10-23"
+    },
+    {
+      "id": "al-02-missing-nights",
+      "title": "그리운 밤 · missing nights",
+      "file": "music/al-missing-nights.m4a",
+      "playlists": [
+        "alone",
+        "wine"
+      ],
+      "gain": 0.9,
+      "added": "2026-10-23"
+    },
+    {
+      "id": "al-03-words-unsent",
+      "title": "보내지 못한 말 · words unsent",
+      "file": "music/al-words-unsent.m4a",
+      "playlists": [
+        "wine",
+        "friends"
+      ],
+      "gain": 0.9,
+      "added": "2026-10-23"
+    },
+    {
+      "id": "al-04-your-season",
+      "title": "너의 계절 · your season",
+      "file": "music/al-your-season.m4a",
+      "playlists": [
+        "wine",
+        "friends"
+      ],
+      "gain": 0.9,
+      "added": "2026-10-23"
+    },
+    {
+      "id": "al-05-wine-glow",
+      "title": "와인빛 · wine glow (album ver.)",
+      "file": "music/al-wine-glow.m4a",
+      "playlists": [
+        "friends",
+        "alone"
+      ],
+      "gain": 0.9,
+      "added": "2026-10-23"
     }
   ]
 }
