@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23",
+  "updated": "2026-10-25",
   "slots": [
     {
       "id": "day",
@@ -239,6 +239,126 @@
       ],
       "gain": 0.9,
       "added": "2026-10-23"
+    },
+    {
+      "id": "2026-10-24-the-cellar",
+      "title": "와인 셀러 · the cellar",
+      "file": "music/the-cellar.m4a",
+      "playlists": [
+        "wine",
+        "alone"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 와인 셀러 · the cellar (v6, vintage jazz trio + tenor sax 88 BPM) · FALL IN WINE",
+      "added": "2026-10-25"
+    },
+    {
+      "id": "2026-10-24-leaves-and-a-glass",
+      "title": "낙엽 위의 잔 · leaves and a glass",
+      "file": "music/leaves-and-a-glass.m4a",
+      "playlists": [
+        "wine",
+        "alone"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 낙엽 위의 잔 · leaves and a glass (v6, muted trumpet cool jazz ballad 74 BPM) · FALL IN WINE",
+      "added": "2026-10-25"
+    },
+    {
+      "id": "2026-10-24-burgundy",
+      "title": "버건디 · burgundy",
+      "file": "music/burgundy.m4a",
+      "playlists": [
+        "wine",
+        "friends"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 버건디 · burgundy (v6, swing jazz quartet 96 BPM) · FALL IN WINE",
+      "added": "2026-10-25"
+    },
+    {
+      "id": "2026-10-24-slow-pour",
+      "title": "천천히 따르기 · slow pour",
+      "file": "music/slow-pour.m4a",
+      "playlists": [
+        "wine",
+        "study"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 천천히 따르기 · slow pour (v6, jazz waltz piano trio 78 BPM) · FALL IN WINE",
+      "added": "2026-10-25"
+    },
+    {
+      "id": "2026-10-25-vineyard-afternoon",
+      "title": "포도밭 오후 · vineyard afternoon",
+      "file": "music/vineyard-afternoon.m4a",
+      "playlists": [
+        "weekend",
+        "wine"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 포도밭 오후 · vineyard afternoon (v6, bossa jazz tenor sax + nylon guitar 92 BPM) · FALL IN WINE",
+      "added": "2026-10-25"
+    },
+    {
+      "id": "2026-10-25-old-label",
+      "title": "오래된 레이블 · old label",
+      "file": "music/old-label.m4a",
+      "playlists": [
+        "alone",
+        "wine"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 오래된 레이블 · old label (v6, bluesy piano trio 84 BPM) · FALL IN WINE",
+      "added": "2026-10-25"
+    },
+    {
+      "id": "2026-10-25-by-candlelight",
+      "title": "촛불 옆 · by candlelight",
+      "file": "music/by-candlelight.m4a",
+      "playlists": [
+        "alone",
+        "wine"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 촛불 옆 · by candlelight (v6, flugelhorn jazz ballad 72 BPM) · FALL IN WINE",
+      "added": "2026-10-25"
+    },
+    {
+      "id": "2026-10-25-autumn-stroll",
+      "title": "가을 산책 · autumn stroll",
+      "file": "music/autumn-stroll.m4a",
+      "playlists": [
+        "weekend",
+        "study"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 가을 산책 · autumn stroll (v6, jazz guitar trio medium swing 100 BPM) · FALL IN WINE",
+      "added": "2026-10-25"
+    },
+    {
+      "id": "2026-10-24-slow-saturday",
+      "title": "느린 토요일 · slow saturday",
+      "file": "music/slow-saturday.m4a",
+      "playlists": [
+        "weekend",
+        "wine"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 느린 토요일 · slow saturday (v6, 80s sophisti-pop vocal (EN) 98 BPM, autumn voice)",
+      "added": "2026-10-25"
+    },
+    {
+      "id": "2026-10-25-tell-me-more",
+      "title": "얘기 더 해 줘 · tell me more",
+      "file": "music/tell-me-more.m4a",
+      "playlists": [
+        "wine",
+        "friends"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 얘기 더 해 줘 · tell me more (v6, 80s city funk pop vocal (KO) 104 BPM, autumn voice)",
+      "added": "2026-10-25"
     }
   ]
 }
