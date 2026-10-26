@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "slots": [
     {
       "id": "day",
@@ -359,6 +359,66 @@
       "gain": 1.0,
       "suno": "TSB 얘기 더 해 줘 · tell me more (v6, 80s city funk pop vocal (KO) 104 BPM, autumn voice)",
       "added": "2026-10-25"
+    },
+    {
+      "id": "2026-10-26-decanter",
+      "title": "디캔터 · decanter",
+      "file": "music/decanter.m4a",
+      "playlists": [
+        "wine",
+        "friends"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 디캔터 · decanter (v6, vibraphone jazz quartet 96 BPM · FALL IN WINE)",
+      "added": "2026-10-26"
+    },
+    {
+      "id": "2026-10-26-red-note",
+      "title": "레드 노트 · red note",
+      "file": "music/red-note.m4a",
+      "playlists": [
+        "wine",
+        "friends"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 레드 노트 · red note (v6, soul jazz organ trio 88 BPM · FALL IN WINE)",
+      "added": "2026-10-26"
+    },
+    {
+      "id": "2026-10-26-lingering-warmth",
+      "title": "남은 온기 · lingering warmth",
+      "file": "music/lingering-warmth.m4a",
+      "playlists": [
+        "alone",
+        "wine"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 남은 온기 · lingering warmth (v6, muted trumpet ballad 70 BPM · FALL IN WINE)",
+      "added": "2026-10-26"
+    },
+    {
+      "id": "2026-10-26-maple-road",
+      "title": "단풍길 · maple road",
+      "file": "music/maple-road.m4a",
+      "playlists": [
+        "weekend",
+        "study"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 단풍길 · maple road (v6, clarinet swing quartet 100 BPM · FALL IN WINE)",
+      "added": "2026-10-26"
+    },
+    {
+      "id": "2026-10-26-stay-a-little-longer",
+      "title": "조금만 더 · stay a little longer",
+      "file": "music/stay-a-little-longer.m4a",
+      "playlists": [
+        "wine",
+        "alone"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 조금만 더 · stay a little longer (v6, 80s synth-pop ballad vocal (EN) 92 BPM, autumn voice)",
+      "added": "2026-10-26"
     }
   ]
 }
