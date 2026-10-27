@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-26",
+  "updated": "2026-10-27",
   "slots": [
     {
       "id": "day",
@@ -419,6 +419,66 @@
       "gain": 1.0,
       "suno": "TSB 조금만 더 · stay a little longer (v6, 80s synth-pop ballad vocal (EN) 92 BPM, autumn voice)",
       "added": "2026-10-26"
+    },
+    {
+      "id": "2026-10-27-table-for-two",
+      "title": "두 사람의 테이블 · table for two",
+      "file": "music/table-for-two.m4a",
+      "playlists": [
+        "wine",
+        "alone"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 두 사람의 테이블 · table for two (v6, piano + upright bass duo 76 BPM · FALL IN WINE)",
+      "added": "2026-10-27"
+    },
+    {
+      "id": "2026-10-27-autumn-window",
+      "title": "가을 창문 · autumn window",
+      "file": "music/autumn-window.m4a",
+      "playlists": [
+        "weekend",
+        "study"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 가을 창문 · autumn window (v6, bossa nova nylon guitar + flute 92 BPM · FALL IN WINE)",
+      "added": "2026-10-27"
+    },
+    {
+      "id": "2026-10-27-amber-hour",
+      "title": "호박빛 · amber hour",
+      "file": "music/amber-hour.m4a",
+      "playlists": [
+        "alone",
+        "wine"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 호박빛 · amber hour (v6, alto sax ballad piano trio 72 BPM · FALL IN WINE)",
+      "added": "2026-10-27"
+    },
+    {
+      "id": "2026-10-27-the-cork",
+      "title": "코르크 · the cork",
+      "file": "music/the-cork.m4a",
+      "playlists": [
+        "friends",
+        "wine"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 코르크 · the cork (v6, medium swing sextet 98 BPM · FALL IN WINE)",
+      "added": "2026-10-27"
+    },
+    {
+      "id": "2026-10-27-instead-of-coffee",
+      "title": "커피 대신 · instead of coffee",
+      "file": "music/instead-of-coffee.m4a",
+      "playlists": [
+        "wine",
+        "friends"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 커피 대신 · instead of coffee (v6, neo-soul pop vocal (KO, male) 84 BPM)",
+      "added": "2026-10-27"
     }
   ]
 }
