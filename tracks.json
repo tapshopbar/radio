@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27",
+  "updated": "2026-10-30",
   "slots": [
     {
       "id": "day",
@@ -479,6 +479,42 @@
       "gain": 1.0,
       "suno": "TSB 커피 대신 · instead of coffee (v6, neo-soul pop vocal (KO, male) 84 BPM)",
       "added": "2026-10-27"
+    },
+    {
+      "id": "2026-10-29-last-leaf",
+      "title": "마지막 잎 · last leaf",
+      "file": "music/last-leaf.m4a",
+      "playlists": [
+        "alone",
+        "wine"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 마지막 잎 · last leaf (v6, flugelhorn quartet ballad 72 BPM · FALL IN WINE)",
+      "added": "2026-10-30"
+    },
+    {
+      "id": "2026-10-30-end-of-october",
+      "title": "시월의 끝 · end of october",
+      "file": "music/end-of-october.m4a",
+      "playlists": [
+        "alone",
+        "wine"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 시월의 끝 · end of october (v6, clarinet + piano trio ballad 70 BPM · FALL IN WINE)",
+      "added": "2026-10-30"
+    },
+    {
+      "id": "2026-10-29-how-was-your-day",
+      "title": "오늘 어땠어 · how was your day",
+      "file": "music/how-was-your-day.m4a",
+      "playlists": [
+        "wine",
+        "friends"
+      ],
+      "gain": 1.0,
+      "suno": "TSB 오늘 어땠어 · how was your day (v6, acoustic folk-pop vocal (KO) 90 BPM, autumn voice)",
+      "added": "2026-10-30"
     }
   ]
 }
