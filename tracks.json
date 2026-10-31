@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30",
+  "updated": "2026-10-31",
   "slots": [
     {
       "id": "day",
@@ -515,6 +515,30 @@
       "gain": 1.0,
       "suno": "TSB 오늘 어땠어 · how was your day (v6, acoustic folk-pop vocal (KO) 90 BPM, autumn voice)",
       "added": "2026-10-30"
+    },
+    {
+      "id": "2026-10-31-rainy-night",
+      "title": "비 내리는 밤 · rainy night",
+      "file": "music/rainy-night.m4a",
+      "playlists": [
+        "alone",
+        "wine"
+      ],
+      "gain": 1.0,
+      "suno": "비 내리는 밤 · rainy night (v6, slow rainy-night jazz ballad, tenor sax + piano trio 66 BPM · SLOW NIGHTS)",
+      "added": "2026-10-31"
+    },
+    {
+      "id": "2026-10-30-the-long-way-home",
+      "title": "먼 길로 돌아가자 · the long way home",
+      "file": "music/the-long-way-home.m4a",
+      "playlists": [
+        "wine",
+        "friends"
+      ],
+      "gain": 1.0,
+      "suno": "먼 길로 돌아가자 · the long way home (v6, jazz-pop + 80s AOR vocal (EN) 96 BPM, autumn voice)",
+      "added": "2026-10-31"
     }
   ]
 }
