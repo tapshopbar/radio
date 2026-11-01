@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-31",
+  "updated": "2026-11-01",
   "slots": [
     {
       "id": "day",
@@ -539,6 +539,30 @@
       "gain": 1.0,
       "suno": "먼 길로 돌아가자 · the long way home (v6, jazz-pop + 80s AOR vocal (EN) 96 BPM, autumn voice)",
       "added": "2026-10-31"
+    },
+    {
+      "id": "2026-10-31-sound-of-rain",
+      "title": "빗소리 · sound of rain",
+      "file": "music/sound-of-rain.m4a",
+      "playlists": [
+        "alone",
+        "wine"
+      ],
+      "gain": 1.0,
+      "suno": "빗소리 · sound of rain (v6, slow piano-led jazz ballad, felt piano + bass + brushes 72 BPM · SLOW NIGHTS)",
+      "added": "2026-11-01"
+    },
+    {
+      "id": "2026-10-31-under-one-umbrella",
+      "title": "우산 같이 쓸래 · under one umbrella",
+      "file": "music/under-one-umbrella.m4a",
+      "playlists": [
+        "wine",
+        "friends"
+      ],
+      "gain": 1.0,
+      "suno": "우산 같이 쓸래 · under one umbrella (v6, lo-fi soul pop + 80s retro vocal (KO) 84 BPM, autumn voice)",
+      "added": "2026-11-01"
     }
   ]
 }
