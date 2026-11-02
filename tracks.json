@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "slots": [
     {
       "id": "day",
@@ -563,6 +563,30 @@
       "gain": 1.0,
       "suno": "우산 같이 쓸래 · under one umbrella (v6, lo-fi soul pop + 80s retro vocal (KO) 84 BPM, autumn voice)",
       "added": "2026-11-01"
+    },
+    {
+      "id": "2026-11-01-neon-in-the-rain",
+      "title": "빗속의 네온 · neon in the rain",
+      "file": "music/neon-in-the-rain.m4a",
+      "playlists": [
+        "alone",
+        "wine"
+      ],
+      "gain": 1.0,
+      "suno": "빗속의 네온 · neon in the rain (v6, slow rainy-night jazz ballad, muted trumpet + piano trio 64 BPM · SLOW NIGHTS)",
+      "added": "2026-11-02"
+    },
+    {
+      "id": "2026-11-01-take-your-time",
+      "title": "천천히 와도 돼 · take your time",
+      "file": "music/take-your-time.m4a",
+      "playlists": [
+        "wine",
+        "friends"
+      ],
+      "gain": 1.0,
+      "suno": "천천히 와도 돼 · take your time (v6, bossa soul pop + 80s retro vocal (KO) 92 BPM, autumn voice)",
+      "added": "2026-11-02"
     }
   ]
 }
