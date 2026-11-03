@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02",
+  "updated": "2026-11-03",
   "slots": [
     {
       "id": "day",
@@ -587,6 +587,18 @@
       "gain": 1.0,
       "suno": "천천히 와도 돼 · take your time (v6, bossa soul pop + 80s retro vocal (KO) 92 BPM, autumn voice)",
       "added": "2026-11-02"
+    },
+    {
+      "id": "2026-11-01-after-the-rain",
+      "title": "비 그친 뒤 · after the rain",
+      "file": "music/after-the-rain.m4a",
+      "playlists": [
+        "alone",
+        "wine"
+      ],
+      "gain": 1.0,
+      "suno": "비 그친 뒤 · after the rain (v6, SLOW NIGHTS tenor sax + jazz guitar bossa ballad 78 BPM, instrumental)",
+      "added": "2026-11-03"
     }
   ]
 }
