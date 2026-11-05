@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-03",
+  "updated": "2026-11-05",
   "slots": [
     {
       "id": "day",
@@ -599,6 +599,18 @@
       "gain": 1.0,
       "suno": "비 그친 뒤 · after the rain (v6, SLOW NIGHTS tenor sax + jazz guitar bossa ballad 78 BPM, instrumental)",
       "added": "2026-11-03"
+    },
+    {
+      "id": "2026-11-02-the-last-bus",
+      "title": "늦은 버스 · the last bus",
+      "file": "music/the-last-bus.m4a",
+      "playlists": [
+        "alone",
+        "study"
+      ],
+      "gain": 1.0,
+      "suno": "늦은 버스 · the last bus (v6, SLOW NIGHTS nylon guitar + felt piano jazz ballad 72 BPM, instrumental)",
+      "added": "2026-11-05"
     }
   ]
 }
