@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05",
+  "updated": "2026-11-06",
   "slots": [
     {
       "id": "day",
@@ -611,6 +611,18 @@
       "gain": 1.0,
       "suno": "늦은 버스 · the last bus (v6, SLOW NIGHTS nylon guitar + felt piano jazz ballad 72 BPM, instrumental)",
       "added": "2026-11-05"
+    },
+    {
+      "id": "2026-11-03-rain-before-dawn",
+      "title": "새벽 비 · rain before dawn",
+      "file": "music/rain-before-dawn.m4a",
+      "playlists": [
+        "alone",
+        "wine"
+      ],
+      "gain": 1.0,
+      "suno": "새벽 비 · rain before dawn (v6, SLOW NIGHTS soprano sax + piano trio closing jazz ballad 62 BPM, instrumental)",
+      "added": "2026-11-06"
     }
   ]
 }
