@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06",
+  "updated": "2026-11-07",
   "slots": [
     {
       "id": "day",
@@ -623,6 +623,18 @@
       "gain": 1.0,
       "suno": "새벽 비 · rain before dawn (v6, SLOW NIGHTS soprano sax + piano trio closing jazz ballad 62 BPM, instrumental)",
       "added": "2026-11-06"
+    },
+    {
+      "id": "2026-11-03-let-me-pour-tonight",
+      "title": "오늘은 내가 따를게 · let me pour tonight",
+      "file": "music/let-me-pour-tonight.m4a",
+      "playlists": [
+        "friends",
+        "wine"
+      ],
+      "gain": 1.0,
+      "suno": "오늘은 내가 따를게 · let me pour tonight (v6, Korean 80s soft rock ballad + city pop 80 BPM, TSB radio · autumn voice)",
+      "added": "2026-11-07"
     }
   ]
 }
