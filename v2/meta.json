@@ -1,0 +1,312 @@
+{
+ "updated": "2026-11-07",
+ "note": "v2 플레이어용 메타(BPM·보컬·스타일). tracks.json은 건드리지 않음. 없는 곡은 playlists로 추정.",
+ "meta": {
+  "2026-10-16-the-day": {
+   "bpm": 84,
+   "vocal": false,
+   "lang": null,
+   "style": "lo-fi jazz"
+  },
+  "2026-10-18-3pm": {
+   "bpm": 82,
+   "vocal": false,
+   "lang": null,
+   "style": "lo-fi jazz"
+  },
+  "2026-10-18-window-seat": {
+   "bpm": 92,
+   "vocal": false,
+   "lang": null,
+   "style": "bossa nova"
+  },
+  "2026-10-18-first-glass": {
+   "bpm": 104,
+   "vocal": false,
+   "lang": null,
+   "style": "jazz house"
+  },
+  "2026-10-18-bubbles": {
+   "bpm": 108,
+   "vocal": false,
+   "lang": null,
+   "style": "city pop"
+  },
+  "2026-10-18-friday-night": {
+   "bpm": 118,
+   "vocal": false,
+   "lang": null,
+   "style": "nu-disco"
+  },
+  "2026-10-19-wine-glow": {
+   "bpm": 128,
+   "vocal": true,
+   "lang": "KO",
+   "style": "K-pop electropop"
+  },
+  "2026-10-19-underline": {
+   "bpm": 80,
+   "vocal": false,
+   "lang": null,
+   "style": "lo-fi jazz hop + bossa"
+  },
+  "2026-10-19-six-thirty": {
+   "bpm": 88,
+   "vocal": true,
+   "lang": "KO",
+   "style": "R&B/neo-soul"
+  },
+  "2026-10-20-focal-point": {
+   "bpm": 84,
+   "vocal": false,
+   "lang": null,
+   "style": "lo-fi jazz + bossa"
+  },
+  "2026-10-20-seoul-lights": {
+   "bpm": 104,
+   "vocal": true,
+   "lang": "EN",
+   "style": "80s city pop"
+  },
+  "2026-10-23-clink": {
+   "bpm": 106,
+   "vocal": false,
+   "lang": null,
+   "style": "acid jazz / jazz-funk"
+  },
+  "2026-10-23-our-usual-spot": {
+   "bpm": 112,
+   "vocal": true,
+   "lang": "KO",
+   "style": "Korean indie pop band"
+  },
+  "al-01-rainy-window": {
+   "bpm": 72,
+   "vocal": true,
+   "lang": "KO",
+   "style": "piano/strings ballad · AUTUMN LONGING"
+  },
+  "al-02-missing-nights": {
+   "bpm": 80,
+   "vocal": true,
+   "lang": "KO",
+   "style": "R&B, Rhodes · AUTUMN LONGING"
+  },
+  "al-03-words-unsent": {
+   "bpm": 96,
+   "vocal": true,
+   "lang": "KO",
+   "style": "80s synth-pop · AUTUMN LONGING"
+  },
+  "al-04-your-season": {
+   "bpm": 76,
+   "vocal": true,
+   "lang": "KO",
+   "style": "piano/strings · AUTUMN LONGING"
+  },
+  "al-05-wine-glow": {
+   "bpm": 128,
+   "vocal": true,
+   "lang": "KO",
+   "style": "K-pop electropop (album ver.) · AUTUMN LONGING"
+  },
+  "2026-10-24-the-cellar": {
+   "bpm": 88,
+   "vocal": false,
+   "lang": null,
+   "style": "vintage jazz trio + tenor sax"
+  },
+  "2026-10-24-leaves-and-a-glass": {
+   "bpm": 74,
+   "vocal": false,
+   "lang": null,
+   "style": "muted trumpet cool jazz ballad"
+  },
+  "2026-10-24-burgundy": {
+   "bpm": 96,
+   "vocal": false,
+   "lang": null,
+   "style": "swing jazz quartet"
+  },
+  "2026-10-24-slow-pour": {
+   "bpm": 78,
+   "vocal": false,
+   "lang": null,
+   "style": "jazz waltz piano trio"
+  },
+  "2026-10-25-vineyard-afternoon": {
+   "bpm": 92,
+   "vocal": false,
+   "lang": null,
+   "style": "bossa jazz tenor sax + nylon guitar"
+  },
+  "2026-10-25-old-label": {
+   "bpm": 84,
+   "vocal": false,
+   "lang": null,
+   "style": "bluesy piano trio"
+  },
+  "2026-10-25-by-candlelight": {
+   "bpm": 72,
+   "vocal": false,
+   "lang": null,
+   "style": "flugelhorn jazz ballad"
+  },
+  "2026-10-25-autumn-stroll": {
+   "bpm": 100,
+   "vocal": false,
+   "lang": null,
+   "style": "jazz guitar trio medium swing"
+  },
+  "2026-10-24-slow-saturday": {
+   "bpm": 98,
+   "vocal": true,
+   "lang": "EN",
+   "style": "80s sophisti-pop vocal (EN"
+  },
+  "2026-10-25-tell-me-more": {
+   "bpm": 104,
+   "vocal": true,
+   "lang": "KO",
+   "style": "80s city funk pop vocal (KO"
+  },
+  "2026-10-26-decanter": {
+   "bpm": 96,
+   "vocal": false,
+   "lang": null,
+   "style": "vibraphone jazz quartet"
+  },
+  "2026-10-26-red-note": {
+   "bpm": 88,
+   "vocal": false,
+   "lang": null,
+   "style": "soul jazz organ trio"
+  },
+  "2026-10-26-lingering-warmth": {
+   "bpm": 70,
+   "vocal": false,
+   "lang": null,
+   "style": "muted trumpet ballad"
+  },
+  "2026-10-26-maple-road": {
+   "bpm": 100,
+   "vocal": false,
+   "lang": null,
+   "style": "clarinet swing quartet"
+  },
+  "2026-10-26-stay-a-little-longer": {
+   "bpm": 92,
+   "vocal": true,
+   "lang": "EN",
+   "style": "80s synth-pop ballad vocal (EN"
+  },
+  "2026-10-27-table-for-two": {
+   "bpm": 76,
+   "vocal": false,
+   "lang": null,
+   "style": "piano + upright bass duo"
+  },
+  "2026-10-27-autumn-window": {
+   "bpm": 92,
+   "vocal": false,
+   "lang": null,
+   "style": "bossa nova nylon guitar + flute"
+  },
+  "2026-10-27-amber-hour": {
+   "bpm": 72,
+   "vocal": false,
+   "lang": null,
+   "style": "alto sax ballad piano trio"
+  },
+  "2026-10-27-the-cork": {
+   "bpm": 98,
+   "vocal": false,
+   "lang": null,
+   "style": "medium swing sextet"
+  },
+  "2026-10-27-instead-of-coffee": {
+   "bpm": 84,
+   "vocal": true,
+   "lang": "KO",
+   "style": "neo-soul pop vocal (KO, male"
+  },
+  "2026-10-29-last-leaf": {
+   "bpm": 72,
+   "vocal": false,
+   "lang": null,
+   "style": "flugelhorn quartet ballad"
+  },
+  "2026-10-30-end-of-october": {
+   "bpm": 70,
+   "vocal": false,
+   "lang": null,
+   "style": "clarinet + piano trio ballad"
+  },
+  "2026-10-29-how-was-your-day": {
+   "bpm": 90,
+   "vocal": true,
+   "lang": "KO",
+   "style": "acoustic folk-pop vocal (KO"
+  },
+  "2026-10-31-rainy-night": {
+   "bpm": 66,
+   "vocal": false,
+   "lang": null,
+   "style": "slow rainy-night jazz ballad, tenor sax + piano trio"
+  },
+  "2026-10-30-the-long-way-home": {
+   "bpm": 96,
+   "vocal": true,
+   "lang": "EN",
+   "style": "jazz-pop + 80s AOR vocal (EN"
+  },
+  "2026-10-31-sound-of-rain": {
+   "bpm": 72,
+   "vocal": false,
+   "lang": null,
+   "style": "slow piano-led jazz ballad, felt piano + bass + brushes"
+  },
+  "2026-10-31-under-one-umbrella": {
+   "bpm": 84,
+   "vocal": true,
+   "lang": "KO",
+   "style": "lo-fi soul pop + 80s retro vocal (KO"
+  },
+  "2026-11-01-neon-in-the-rain": {
+   "bpm": 64,
+   "vocal": false,
+   "lang": null,
+   "style": "slow rainy-night jazz ballad, muted trumpet + piano trio"
+  },
+  "2026-11-01-take-your-time": {
+   "bpm": 92,
+   "vocal": true,
+   "lang": "KO",
+   "style": "bossa soul pop + 80s retro vocal (KO"
+  },
+  "2026-11-01-after-the-rain": {
+   "bpm": 78,
+   "vocal": false,
+   "lang": null,
+   "style": "SLOW NIGHTS tenor sax + jazz guitar bossa ballad"
+  },
+  "2026-11-02-the-last-bus": {
+   "bpm": 72,
+   "vocal": false,
+   "lang": null,
+   "style": "SLOW NIGHTS nylon guitar + felt piano jazz ballad"
+  },
+  "2026-11-03-rain-before-dawn": {
+   "bpm": 62,
+   "vocal": false,
+   "lang": null,
+   "style": "SLOW NIGHTS soprano sax + piano trio closing jazz ballad"
+  },
+  "2026-11-03-let-me-pour-tonight": {
+   "bpm": 80,
+   "vocal": false,
+   "lang": null,
+   "style": "Korean 80s soft rock ballad + city pop"
+  }
+ }
+}

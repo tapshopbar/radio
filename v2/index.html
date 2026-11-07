@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#3A0812">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>tsb radio v2 · 선곡 플레이어</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<style>
+  :root{--wine:#4A0B18;--wine1:#6E1426;--wine2:#3A0812;--navy:#141B33;--cream:#FFFDFC;--yellow:#FFC100;--rose:#C9A3A6;--grey:#8E8A8C;--ink:#0E0E0E;--line:rgba(255,253,252,.14);--card:rgba(255,253,252,.06)}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{font-family:Pretendard,-apple-system,"Apple SD Gothic Neo",sans-serif;color:var(--cream);
+    background:radial-gradient(120% 90% at 20% 0%,var(--wine1) 0%,var(--wine) 45%,var(--wine2) 75%,var(--navy) 130%) fixed;
+    display:flex;flex-direction:column;min-height:100%;-webkit-user-select:none;user-select:none}
+  a{color:inherit}
+  button{font:inherit;color:var(--cream);background:var(--card);border:1px solid rgba(255,253,252,.25);border-radius:999px;padding:9px 16px;font-size:14px;cursor:pointer;white-space:nowrap}
+  button:active{transform:scale(.97)}
+  button.primary{background:var(--cream);color:var(--wine);border:0;font-weight:800}
+  button.ghost{background:transparent;border-color:transparent;color:var(--rose)}
+  button.sm{padding:6px 11px;font-size:12.5px}
+  header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 20px 10px;max-width:1240px;width:100%;margin:0 auto}
+  .brand{font-weight:800;font-size:20px;letter-spacing:-.02em;line-height:1.1}
+  .brand small{display:block;font-weight:400;font-size:11.5px;color:var(--rose);margin-top:3px}
+  .me{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--rose)}
+  .me img{width:28px;height:28px;border-radius:50%;border:1px solid var(--line)}
+  .clock{font-variant-numeric:tabular-nums;font-size:18px;font-weight:300;color:var(--rose)}
+  .wrap{display:grid;grid-template-columns:300px 1fr;gap:18px;max-width:1240px;width:100%;margin:0 auto;padding:0 20px 150px;flex:1}
+  @media (max-width:860px){.wrap{grid-template-columns:1fr;padding-bottom:170px}}
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px}
+  .panel h3{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--rose);font-weight:700;margin:8px 0 10px}
+  .chan{display:flex;flex-direction:column;gap:6px}
+  .ch{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 12px;border-radius:12px;border:1px solid transparent;cursor:pointer;background:rgba(255,253,252,.03)}
+  .ch:hover{background:rgba(255,253,252,.08)}
+  .ch.on{background:var(--cream);color:var(--wine);font-weight:700}
+  .ch .n{font-size:12px;color:var(--grey)}.ch.on .n{color:var(--wine1)}
+  .ch .lbl{display:flex;align-items:center;gap:8px}
+  .ch .lbl em{font-style:normal;font-size:15px;width:20px;text-align:center}
+  .tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+  .tabs button{padding:6px 12px;font-size:12.5px}
+  .tabs button.on{background:var(--cream);color:var(--wine);border-color:var(--cream);font-weight:700}
+  .list-head{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+  .list-head input[type=search]{flex:1;min-width:160px;font:inherit;font-size:14px;padding:10px 14px;border-radius:12px;border:1px solid var(--line);background:rgba(0,0,0,.18);color:var(--cream);outline:none}
+  select{font:inherit;font-size:13px;padding:9px 12px;border-radius:12px;border:1px solid var(--line);background:rgba(0,0,0,.18);color:var(--cream)}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th{font-size:11.5px;color:var(--rose);font-weight:600;text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);letter-spacing:.04em}
+  td{padding:9px 8px;border-bottom:1px solid rgba(255,253,252,.07);vertical-align:middle}
+  tr.t:hover td{background:rgba(255,253,252,.05)}
+  tr.t.now td{background:rgba(255,193,0,.12)}
+  tr.t.now td.ti::before{content:"▶ ";color:var(--yellow)}
+  td.ti{font-weight:600}
+  td.ti small{display:block;font-weight:400;color:var(--rose);font-size:12px;margin-top:2px}
+  td.num{font-variant-numeric:tabular-nums;color:var(--rose);white-space:nowrap}
+  .tag{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:999px;border:1px solid var(--line);color:var(--rose);margin-right:4px;white-space:nowrap}
+  .tag.v{color:#1a1a1a;background:var(--yellow);border-color:var(--yellow)}
+  .star{background:transparent;border:0;font-size:20px;line-height:1;padding:4px 6px;color:rgba(255,253,252,.35)}
+  .star.on{color:var(--yellow)}
+  .act{display:flex;gap:4px;justify-content:flex-end}
+  .empty{padding:30px;text-align:center;color:var(--rose);font-size:14px}
+  .queue{margin-top:14px}
+  .q{display:flex;justify-content:space-between;align-items:center;padding:7px 10px;border-radius:10px;background:rgba(0,0,0,.15);margin-bottom:5px;font-size:13px}
+  .q .x{background:transparent;border:0;color:var(--rose);padding:2px 6px;font-size:14px}
+  .sched{font-size:12.5px;color:var(--rose);line-height:1.7}
+  .sched b{color:var(--cream)}
+  /* now playing bar */
+  #now{position:fixed;left:0;right:0;bottom:0;z-index:4;background:rgba(14,14,14,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:12px 20px 14px}
+  #now .in{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center}
+  @media (max-width:860px){#now .in{grid-template-columns:1fr;gap:8px}}
+  .np .t{font-size:17px;font-weight:800;letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .np .s{font-size:12px;color:var(--rose);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .bar{height:3px;background:rgba(255,253,252,.18);border-radius:3px;overflow:hidden;margin-top:8px}
+  .bar i{display:block;height:100%;width:0;background:var(--yellow);transition:width .5s linear}
+  .ctl{display:flex;gap:8px;align-items:center;justify-content:center}
+  .ctl .big{width:52px;height:52px;border-radius:50%;padding:0;font-size:20px;background:var(--cream);color:var(--wine);border:0;font-weight:800}
+  .vol{display:flex;align-items:center;gap:8px;justify-content:flex-end;font-size:12px;color:var(--rose)}
+  input[type=range]{accent-color:var(--cream);width:120px}
+  /* gate */
+  #gate{position:fixed;inset:0;z-index:9;display:flex;align-items:center;justify-content:center;background:rgba(20,27,51,.6);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:20px}
+  #gate .card{width:100%;max-width:420px;background:linear-gradient(160deg,var(--wine1),var(--wine2));border:1px solid var(--line);border-radius:24px;padding:34px 30px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+  #gate h1{font-size:30px;font-weight:800;letter-spacing:-.03em}
+  #gate h1 small{display:block;font-size:12px;font-weight:400;color:var(--rose);letter-spacing:.14em;margin-top:6px}
+  #gate p{font-size:13.5px;color:var(--rose);line-height:1.7;margin:16px 0 22px}
+  #gbtn{display:flex;justify-content:center;min-height:44px}
+  #gate .alt{margin-top:14px}
+  #gate .note{font-size:11.5px;color:var(--grey);margin-top:16px;line-height:1.6}
+  .hidden{display:none!important}
+  .toast{position:fixed;left:50%;bottom:110px;transform:translateX(-50%);background:var(--cream);color:var(--wine);padding:10px 16px;border-radius:999px;font-size:13px;font-weight:700;z-index:8;opacity:0;transition:opacity .3s;pointer-events:none}
+  .toast.show{opacity:1}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">tsb radio <span style="color:var(--yellow)">v2</span><small>tap shop bar · 선곡 플레이어 (시험판)</small></div>
+  <div style="display:flex;align-items:center;gap:14px">
+    <div class="me" id="me"></div>
+    <div class="clock" id="clock">--:--</div>
+  </div>
+</header>
+
+<div class="wrap">
+  <aside>
+    <div class="panel">
+      <h3>채널</h3>
+      <div class="chan" id="chan"></div>
+      <h3 style="margin-top:16px">자동 편성표</h3>
+      <div class="sched" id="sched"></div>
+    </div>
+    <div class="panel queue">
+      <h3>대기열 <span id="qn" style="color:var(--yellow)"></span></h3>
+      <div id="queue"><div class="empty" style="padding:14px">목록에서 ＋ 를 누르면 다음 순서로 재생됩니다</div></div>
+    </div>
+  </aside>
+
+  <section class="panel">
+    <div class="tabs" id="filters"></div>
+    <div class="list-head">
+      <input id="q" type="search" placeholder="곡 제목 · 스타일 검색">
+      <select id="sort">
+        <option value="added">최근 추가순</option>
+        <option value="title">제목순</option>
+        <option value="bpm">느린 순 (BPM)</option>
+        <option value="bpmd">빠른 순 (BPM)</option>
+        <option value="fav">내 즐겨찾기 먼저</option>
+      </select>
+      <button class="sm" id="playAll">이 목록 셔플 재생</button>
+    </div>
+    <table>
+      <thead><tr><th style="width:36px"></th><th>곡</th><th style="width:120px">구성</th><th style="width:64px">BPM</th><th style="width:110px">추가일</th><th style="width:120px"></th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div class="empty hidden" id="none">조건에 맞는 곡이 없습니다</div>
+  </section>
+</div>
+
+<div id="now">
+  <div class="in">
+    <div class="np">
+      <div class="t" id="npT">재생할 채널이나 곡을 고르세요</div>
+      <div class="s" id="npS">탭샵바 자체 제작 음악만 재생합니다</div>
+      <div class="bar"><i id="prog"></i></div>
+    </div>
+    <div class="ctl">
+      <button id="prev" title="이전 곡">⏮</button>
+      <button class="big" id="pp">▶</button>
+      <button id="next" title="다음 곡">⏭</button>
+      <button class="sm" id="favNow" title="지금 곡 즐겨찾기">☆</button>
+    </div>
+    <div class="vol">볼륨 <input id="vol" type="range" min="0" max="100" value="80"> <span id="chanNow" class="tag"></span></div>
+  </div>
+</div>
+
+<div id="gate">
+  <div class="card">
+    <h1>tsb radio<small>WINE IS SECOND AMERICANO</small></h1>
+    <p>탭샵바 직원용 선곡 플레이어입니다.<br>구글(tsb.wine) 계정으로 들어오면 내가 좋아하는 곡에 ★ 를 붙여 둘 수 있어요.</p>
+    <div id="gbtn"></div>
+    <div class="alt"><button class="ghost" id="guest">로그인 없이 듣기 (★는 이 기기에만 저장)</button></div>
+    <div class="note" id="gateNote"></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(() => {
+  // ───────── 설정 ─────────
+  const CONFIG = {
+    GOOGLE_CLIENT_ID: '207804770718-auc7ej84b15lkla8a1vqco91k692db62.apps.googleusercontent.com',          // Google Cloud OAuth 클라이언트 ID (설정 전엔 게스트만 가능)
+    ALLOWED_DOMAIN: 'tsb.wine',    // 이 도메인 계정만 허용 ('' 이면 모두 허용)
+    SYNC_URL: 'https://script.google.com/macros/s/AKfycbwgdhrsOEm4zKWTO1ktlAxcUJ79z424nJUG7OoCRqTX-vstpTUcIkmkb2STAkl5s9tv3A/exec',                  // 즐겨찾기 동기화 Apps Script 웹앱 URL (비우면 이 기기에만 저장)
+    FADE: 4,                       // 크로스페이드(초)
+    REFRESH_MIN: 30,               // tracks.json 다시 읽는 간격(분)
+    FAST_BPM: 100, QUIET_BPM: 85,
+    BASE: '../',                   // tracks.json·music/ 위치 (v1과 같은 폴더)
+    META_INLINE: null              // 미리보기용: meta.json 내용을 직접 넣을 때
+  };
+  const $ = id => document.getElementById(id);
+  const h = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  // ───────── 라이브러리 ─────────
+  let lib = { slots: [], tracks: [] }, meta = {};
+  async function loadLib() {
+    try {
+      const [a, b] = await Promise.all([
+        fetch(CONFIG.BASE + 'tracks.json?t=' + Date.now(), { cache: 'no-store' }),
+        CONFIG.META_INLINE ? Promise.resolve({ ok: true, json: async () => CONFIG.META_INLINE }) : fetch('meta.json?t=' + Date.now(), { cache: 'no-store' })
+      ]);
+      if (a.ok) lib = await a.json();
+      if (b.ok) meta = (await b.json()).meta || {};
+    } catch (e) {}
+    lib.tracks.forEach(t => {
+      const m = meta[t.id] || {};
+      t.bpm = m.bpm || null; t.vocal = !!m.vocal; t.lang = m.lang || null; t.style = m.style || '';
+      if (t.bpm == null) {           // 메타가 없으면 플레이리스트로 추정
+        t.bpm = t.playlists.includes('friends') ? 104 : t.playlists.includes('alone') ? 78 : 90;
+        t.bpmGuess = true;
+      }
+    });
+    renderChannels(); renderList(); renderSched();
+  }
+
+  // ───────── 채널 (비즈멜론식 채널 선택 + 우리만의 선곡) ─────────
+  const CH = [
+    { id: 'auto',  icon: '🕰', label: '시간대 자동',   desc: '오후 카페 · 17시 와인 · 21시 모임', f: t => slotPool().includes(t) },
+    { id: 'all',   icon: '🔀', label: '전체 랜덤',     f: () => true },
+    { id: 'inst',  icon: '🎷', label: '연주곡만',      f: t => !t.vocal },
+    { id: 'vocal', icon: '🎤', label: '보컬곡',        f: t => t.vocal },
+    { id: 'fast',  icon: '⚡', label: '빠른 템포',     desc: `${CONFIG.FAST_BPM} BPM 이상`, f: t => t.bpm >= CONFIG.FAST_BPM },
+    { id: 'mid',   icon: '🍷', label: '미디엄',        desc: `${CONFIG.QUIET_BPM + 1}~${CONFIG.FAST_BPM - 1} BPM`, f: t => t.bpm > CONFIG.QUIET_BPM && t.bpm < CONFIG.FAST_BPM },
+    { id: 'quiet', icon: '🌙', label: '조용한 곡',     desc: `${CONFIG.QUIET_BPM} BPM 이하`, f: t => t.bpm <= CONFIG.QUIET_BPM },
+    { id: 'wine',  icon: '🥂', label: "wine o'clock",  f: t => t.playlists.includes('wine') },
+    { id: 'friends', icon: '🎉', label: '모임',        f: t => t.playlists.includes('friends') },
+    { id: 'alone', icon: '📖', label: '혼술 · 늦은 밤', f: t => t.playlists.includes('alone') },
+    { id: 'cafe',  icon: '☕', label: '카페 오후',     f: t => t.playlists.some(p => ['study', 'focus', 'weekend'].includes(p)) },
+    { id: 'fav',   icon: '★', label: '내 즐겨찾기',   f: t => favs.has(t.id) },
+  ];
+  let chanId = 'auto', filterId = 'all';
+
+  function currentSlot() {
+    let hh = new Date().getHours(); if (hh < 5) hh += 24;
+    return lib.slots.find(s => hh >= s.from && hh < s.to) || lib.slots[0] || { label: 'tsb radio', playlists: [] };
+  }
+  function slotPool() {
+    const s = currentSlot();
+    const p = lib.tracks.filter(t => t.playlists.some(x => s.playlists.includes(x)));
+    return p.length ? p : lib.tracks;
+  }
+  const chanOf = id => CH.find(c => c.id === id);
+  function pool(id) { const c = chanOf(id); return lib.tracks.filter(c.f); }
+
+  function renderChannels() {
+    $('chan').innerHTML = CH.map(c => {
+      const n = pool(c.id).length;
+      return `<div class="ch ${c.id === chanId ? 'on' : ''}" data-id="${c.id}"><span class="lbl"><em>${c.icon}</em><span>${c.label}${c.desc ? `<br><span class="n">${c.desc}</span>` : ''}</span></span><span class="n">${n}곡</span></div>`;
+    }).join('');
+    $('chan').querySelectorAll('.ch').forEach(el => el.onclick = () => { setChannel(el.dataset.id, true); });
+    $('filters').innerHTML = CH.map(c => `<button class="${c.id === filterId ? 'on' : ''}" data-id="${c.id}">${c.icon} ${c.label}</button>`).join('');
+    $('filters').querySelectorAll('button').forEach(b => b.onclick = () => { filterId = b.dataset.id; renderChannels(); renderList(); });
+    $('chanNow').textContent = chanOf(chanId).label;
+  }
+  function renderSched() {
+    $('sched').innerHTML = lib.slots.map(s => `<b>${String(s.from).padStart(2, '0')}–${String(s.to % 24).padStart(2, '0')}시</b> ${h(s.label)}<br>`).join('') +
+      `<span style="color:var(--grey)">지금: ${h(currentSlot().label)}</span>`;
+  }
+  function setChannel(id, play) {
+    chanId = id; renderChannels();
+    toast(`채널: ${chanOf(id).label}`);
+    if (play) { ensureAudio().then(() => { if (!decks[cur].track || !playing) advance(); }); }
+  }
+
+  // ───────── 목록 ─────────
+  function visible() {
+    const q = $('q').value.trim().toLowerCase();
+    let L = pool(filterId).filter(t => !q || (t.title + ' ' + t.style + ' ' + t.playlists.join(' ')).toLowerCase().includes(q));
+    const s = $('sort').value;
+    if (s === 'title') L.sort((a, b) => a.title.localeCompare(b.title, 'ko'));
+    else if (s === 'bpm') L.sort((a, b) => a.bpm - b.bpm);
+    else if (s === 'bpmd') L.sort((a, b) => b.bpm - a.bpm);
+    else if (s === 'fav') L.sort((a, b) => (favs.has(b.id) - favs.has(a.id)) || (b.added || '').localeCompare(a.added || ''));
+    else L.sort((a, b) => (b.added || '').localeCompare(a.added || '') || b.id.localeCompare(a.id));
+    return L;
+  }
+  function renderList() {
+    const L = visible(), nowId = decks[cur] && decks[cur].track ? decks[cur].track.id : null;
+    $('none').classList.toggle('hidden', L.length > 0);
+    $('rows').innerHTML = L.map(t => `
+      <tr class="t ${t.id === nowId ? 'now' : ''}" data-id="${t.id}">
+        <td><button class="star ${favs.has(t.id) ? 'on' : ''}" data-fav="${t.id}" title="즐겨찾기">${favs.has(t.id) ? '★' : '☆'}</button></td>
+        <td class="ti">${h(t.title)}<small>${h(t.style || t.playlists.join(' · '))}</small></td>
+        <td>${t.vocal ? `<span class="tag v">보컬${t.lang ? ' ' + t.lang : ''}</span>` : '<span class="tag">연주</span>'}</td>
+        <td class="num">${t.bpm}${t.bpmGuess ? '?' : ''}</td>
+        <td class="num">${t.added || ''}</td>
+        <td class="act"><button class="sm" data-play="${t.id}">▶ 재생</button><button class="sm" data-q="${t.id}">＋</button></td>
+      </tr>`).join('');
+    $('rows').querySelectorAll('[data-play]').forEach(b => b.onclick = () => playNow(b.dataset.play));
+    $('rows').querySelectorAll('[data-q]').forEach(b => b.onclick = () => enqueue(b.dataset.q));
+    $('rows').querySelectorAll('[data-fav]').forEach(b => b.onclick = () => toggleFav(b.dataset.fav));
+  }
+  $('q').oninput = renderList; $('sort').onchange = renderList;
+  $('playAll').onclick = () => { const L = visible(); if (!L.length) return; queue = L.slice().sort(() => Math.random() - .5).map(t => t.id); renderQueue(); ensureAudio().then(() => { advancing = false; advance(); }); };
+
+  // ───────── 대기열 ─────────
+  let queue = [];
+  function enqueue(id) { if (!queue.includes(id)) { queue.push(id); renderQueue(); toast('대기열에 추가'); } }
+  function renderQueue() {
+    $('qn').textContent = queue.length ? queue.length : '';
+    $('queue').innerHTML = queue.length ? queue.map((id, i) => { const t = byId(id); return t ? `<div class="q"><span>${i + 1}. ${h(t.title)}</span><button class="x" data-rm="${i}">✕</button></div>` : ''; }).join('')
+      : '<div class="empty" style="padding:14px">목록에서 ＋ 를 누르면 다음 순서로 재생됩니다</div>';
+    $('queue').querySelectorAll('[data-rm]').forEach(b => b.onclick = () => { queue.splice(+b.dataset.rm, 1); renderQueue(); });
+  }
+  const byId = id => lib.tracks.find(t => t.id === id);
+
+  // ───────── 즐겨찾기 (로컬 + 선택적 동기화) ─────────
+  let user = null, favs = new Set(), idToken = null;
+  const favKey = () => 'tsbradio.fav.' + (user ? user.email : 'guest');
+  function loadFavs() { try { favs = new Set(JSON.parse(localStorage.getItem(favKey()) || '[]')); } catch (e) { favs = new Set(); } }
+  function saveFavs() { localStorage.setItem(favKey(), JSON.stringify([...favs])); syncFavs(); }
+  function toggleFav(id) { favs.has(id) ? favs.delete(id) : favs.add(id); saveFavs(); renderChannels(); renderList(); updateFavNow(); }
+  function updateFavNow() { const t = decks[cur] && decks[cur].track; $('favNow').textContent = t && favs.has(t.id) ? '★' : '☆'; $('favNow').classList.toggle('star', false); }
+  $('favNow').onclick = () => { const t = decks[cur] && decks[cur].track; if (t) toggleFav(t.id); };
+  async function syncFavs() {
+    if (!CONFIG.SYNC_URL || !idToken) return;
+    try { await fetch(CONFIG.SYNC_URL, { method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify({ token: idToken, favs: [...favs] }) }); } catch (e) {}
+  }
+  async function pullFavs() {
+    if (!CONFIG.SYNC_URL || !idToken) return;
+    try { const r = await fetch(CONFIG.SYNC_URL + '?token=' + encodeURIComponent(idToken)); if (r.ok) { const j = await r.json(); if (Array.isArray(j.favs)) { j.favs.forEach(x => favs.add(x)); localStorage.setItem(favKey(), JSON.stringify([...favs])); } } } catch (e) {}
+  }
+
+  // ───────── 로그인 게이트 (Google Identity Services) ─────────
+  function enter() { $('gate').classList.add('hidden'); loadFavs(); pullFavs().then(() => { renderChannels(); renderList(); }); renderMe(); }
+  function renderMe() {
+    $('me').innerHTML = user ? `${user.picture ? `<img src="${user.picture}" alt="">` : ''}<span>${h(user.name || user.email)}</span><button class="sm ghost" id="out">나가기</button>`
+      : `<span>게스트</span><button class="sm ghost" id="out">로그인</button>`;
+    $('out').onclick = () => { user = null; idToken = null; favs = new Set(); $('gate').classList.remove('hidden'); renderMe(); };
+  }
+  function onCred(resp) {
+    try {
+      const p = JSON.parse(atob(resp.credential.split('.')[1].replace(/-/g, '+').replace(/_/g, '/')));
+      if (CONFIG.ALLOWED_DOMAIN && p.hd !== CONFIG.ALLOWED_DOMAIN) { $('gateNote').textContent = `@${CONFIG.ALLOWED_DOMAIN} 계정만 들어올 수 있습니다 (${p.email})`; return; }
+      user = { email: p.email, name: p.name, picture: p.picture }; idToken = resp.credential;
+      enter();
+    } catch (e) { $('gateNote').textContent = '로그인 정보를 읽지 못했습니다. 다시 시도해 주세요.'; }
+  }
+  function initGoogle() {
+    if (!CONFIG.GOOGLE_CLIENT_ID) {
+      $('gateNote').innerHTML = 'Google 로그인은 관리자가 클라이언트 ID를 넣으면 켜집니다.<br>지금은 <b>로그인 없이 듣기</b>로 시작하세요.';
+      return;
+    }
+    const tryInit = () => {
+      if (!(window.google && google.accounts)) { setTimeout(tryInit, 300); return; }
+      google.accounts.id.initialize({ client_id: CONFIG.GOOGLE_CLIENT_ID, callback: onCred, hd: CONFIG.ALLOWED_DOMAIN || undefined, auto_select: true });
+      google.accounts.id.renderButton($('gbtn'), { theme: 'filled_black', size: 'large', shape: 'pill', text: 'signin_with', locale: 'ko' });
+    };
+    tryInit();
+  }
+  $('guest').onclick = () => { user = null; enter(); };
+
+  // ───────── 오디오 엔진 (v1과 같은 2덱 크로스페이드) ─────────
+  let ctx, master, decks = [{}, {}], cur = 0, playing = false, history = [], wakeLock = null, advancing = false;
+  async function ensureAudio() {
+    if (ctx) { if (ctx.state === 'suspended') await ctx.resume(); return; }
+    ctx = new (window.AudioContext || window.webkitAudioContext)();
+    master = ctx.createGain(); master.gain.value = $('vol').value / 100; master.connect(ctx.destination);
+    decks = [makeDeck(), makeDeck()];
+    await ctx.resume(); keepAwake();
+  }
+  function makeDeck() {
+    const a = new Audio(); a.preload = 'auto'; a.crossOrigin = 'anonymous';
+    const src = ctx.createMediaElementSource(a); const g = ctx.createGain(); g.gain.value = 0; src.connect(g).connect(master);
+    const d = { a, g, track: null };
+    a.addEventListener('timeupdate', () => onTime(d));
+    a.addEventListener('ended', () => { if (d === decks[cur]) advance(); });
+    a.addEventListener('error', () => { if (d === decks[cur]) setTimeout(advance, 3000); });
+    return d;
+  }
+  function onTime(d) {
+    if (d !== decks[cur] || !d.a.duration) return;
+    $('prog').style.width = (100 * d.a.currentTime / d.a.duration) + '%';
+    if (d.a.duration - d.a.currentTime < CONFIG.FADE && !advancing) advance();
+  }
+  function pickTrack() {
+    if (queue.length) { const t = byId(queue.shift()); renderQueue(); if (t) return t; }
+    let p = pool(chanId); if (!p.length) p = lib.tracks.slice(); if (!p.length) return null;
+    const recent = history.slice(-Math.min(p.length - 1, 8));
+    const fresh = p.filter(t => !recent.includes(t.id));
+    const L = fresh.length ? fresh : p;
+    return L[Math.floor(Math.random() * L.length)];
+  }
+  async function playTrack(t) {
+    const prev = decks[cur]; cur = 1 - cur; const d = decks[cur];
+    d.track = t; d.a.src = CONFIG.BASE + t.file; d.a.currentTime = 0;
+    const now = ctx.currentTime; d.g.gain.cancelScheduledValues(now); d.g.gain.setValueAtTime(0, now);
+    try { await d.a.play(); } catch (e) { advancing = false; setTimeout(advance, 3000); return false; }
+    d.g.gain.linearRampToValueAtTime(t.gain || 1, now + CONFIG.FADE);
+    if (prev && prev.track) {
+      prev.g.gain.cancelScheduledValues(now); prev.g.gain.setValueAtTime(prev.g.gain.value, now); prev.g.gain.linearRampToValueAtTime(0, now + CONFIG.FADE);
+      setTimeout(() => { if (decks[cur] !== prev) prev.a.pause(); }, CONFIG.FADE * 1000 + 200);
+    }
+    history.push(t.id); if (history.length > 50) history.shift();
+    playing = true; $('pp').textContent = '⏸';
+    showNow(t);
+    if ('mediaSession' in navigator) {
+      navigator.mediaSession.metadata = new MediaMetadata({ title: t.title, artist: 'tsb radio', album: chanOf(chanId).label });
+      navigator.mediaSession.setActionHandler('nexttrack', () => $('next').click());
+      navigator.mediaSession.setActionHandler('previoustrack', () => $('prev').click());
+    }
+    return true;
+  }
+  async function advance() {
+    if (advancing) return; advancing = true;
+    const t = pickTrack(); if (!t) { advancing = false; return; }
+    await playTrack(t);
+    setTimeout(() => { advancing = false; }, CONFIG.FADE * 1000 + 500);
+  }
+  async function playNow(id) { const t = byId(id); if (!t) return; await ensureAudio(); advancing = true; await playTrack(t); setTimeout(() => { advancing = false; }, CONFIG.FADE * 1000 + 500); }
+  function showNow(t) {
+    $('npT').textContent = t.title;
+    $('npS').textContent = [t.style, t.vocal ? '보컬' : '연주', t.bpm + ' BPM', t.playlists.join(' · ')].filter(Boolean).join(' · ');
+    document.title = t.title + ' · tsb radio v2';
+    renderList(); updateFavNow();
+  }
+  async function keepAwake() { try { if ('wakeLock' in navigator) wakeLock = await navigator.wakeLock.request('screen'); } catch (e) {} }
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') keepAwake(); });
+
+  $('pp').onclick = async () => {
+    await ensureAudio();
+    if (!decks[cur].track) { advance(); return; }
+    if (playing) { await ctx.suspend(); $('pp').textContent = '▶'; } else { await ctx.resume(); $('pp').textContent = '⏸'; }
+    playing = !playing;
+  };
+  $('next').onclick = async () => { await ensureAudio(); advancing = false; advance(); };
+  $('prev').onclick = async () => { await ensureAudio(); const id = history[history.length - 2]; if (id) { history.pop(); history.pop(); playNow(id); } };
+  $('vol').oninput = e => { if (master) master.gain.value = e.target.value / 100; };
+
+  function toast(m) { const t = $('toast'); t.textContent = m; t.classList.add('show'); clearTimeout(t._t); t._t = setTimeout(() => t.classList.remove('show'), 1600); }
+  function tick() { $('clock').textContent = new Date().toTimeString().slice(0, 5); }
+  setInterval(tick, 10000); tick();
+  setInterval(loadLib, CONFIG.REFRESH_MIN * 60 * 1000);
+  loadLib(); initGoogle(); renderQueue();
+})();
+</script>
+</body>
+</html>
