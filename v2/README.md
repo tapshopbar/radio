@@ -17,3 +17,5 @@
 1. Google Cloud 콘솔(hello@tsb.wine) → API 및 서비스 → 사용자 인증 정보 → OAuth 클라이언트 ID(웹) 생성, 원본에 `https://tapshopbar.github.io` 추가 → ID를 `CONFIG.GOOGLE_CLIENT_ID`에.
 2. (선택) `sync.gs`를 Apps Script 웹앱으로 배포 → URL을 `CONFIG.SYNC_URL`에.
 3. 매장 iPad/PC는 계속 `/radio/` (v1). v2는 직원 개인 기기·본사에서 먼저 써 보고, 문제 없으면 매장 전환을 따로 결정.
+
+_배포: 2026-11-07_
