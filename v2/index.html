@@ -154,7 +154,7 @@
 
 <div id="gate">
   <div class="card">
-    <h1>tsb radio<small>WINE IS SECOND AMERICANO</small></h1>
+    <h1>tsb radio<small>wine is second americano</small></h1>
     <p>탭샵바 직원용 선곡 플레이어입니다.<br>구글(tsb.wine) 계정으로 들어오면 내가 좋아하는 곡에 ★ 를 붙여 둘 수 있어요.</p>
     <div id="gbtn"></div>
     <div class="alt"><button class="ghost" id="guest">로그인 없이 듣기 (★는 이 기기에만 저장)</button></div>
@@ -318,7 +318,7 @@
   }
   function onCred(resp) {
     try {
-      const p = JSON.parse(atob(resp.credential.split('.')[1].replace(/-/g, '+').replace(/_/g, '/')));
+      const b64 = resp.credential.split('.')[1].replace(/-/g, '+').replace(/_/g, '/'); const p = JSON.parse(new TextDecoder().decode(Uint8Array.from(atob(b64), c => c.charCodeAt(0))));
       if (CONFIG.ALLOWED_DOMAIN && p.hd !== CONFIG.ALLOWED_DOMAIN) { $('gateNote').textContent = `@${CONFIG.ALLOWED_DOMAIN} 계정만 들어올 수 있습니다 (${p.email})`; return; }
       user = { email: p.email, name: p.name, picture: p.picture }; idToken = resp.credential;
       enter();
