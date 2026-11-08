@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07",
+  "updated": "2026-11-08",
   "slots": [
     {
       "id": "day",
@@ -635,6 +635,30 @@
       "gain": 1.0,
       "suno": "오늘은 내가 따를게 · let me pour tonight (v6, Korean 80s soft rock ballad + city pop 80 BPM, TSB radio · autumn voice)",
       "added": "2026-11-07"
+    },
+    {
+      "id": "2026-11-08-misted-window",
+      "title": "김 서린 창 · misted window",
+      "file": "music/misted-window.m4a",
+      "playlists": [
+        "alone",
+        "study"
+      ],
+      "gain": 1.0,
+      "suno": "김 서린 창 · misted window (v6, slow intimate jazz ballad 70 BPM, felt piano + vibraphone, SLOW NIGHTS bonus)",
+      "added": "2026-11-08"
+    },
+    {
+      "id": "2026-11-06-your-name-on-the-window",
+      "title": "창문에 쓴 이름 · your name on the window",
+      "file": "music/your-name-on-the-window.m4a",
+      "playlists": [
+        "alone",
+        "wine"
+      ],
+      "gain": 1.0,
+      "suno": "창문에 쓴 이름 · your name on the window (v6, English 80s synth-pop ballad 84 BPM, TSB radio · autumn voice)",
+      "added": "2026-11-08"
     }
   ]
 }
