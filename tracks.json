@@ -20,7 +20,13 @@
       "playlists": [
         "wine",
         "weekend"
-      ]
+      ],
+      "stores": {
+        "cg": {
+          "label": "wine o'clock · 첫 잔 · 청계",
+          "minBpm": 90
+        }
+      }
     },
     {
       "id": "night",
@@ -46,7 +52,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 하루 · the day (v6, 3:24)",
-      "added": "2026-10-18"
+      "added": "2026-10-18",
+      "bpm": 84
     },
     {
       "id": "2026-10-18-3pm",
@@ -183,7 +190,8 @@
         "wine"
       ],
       "gain": 0.9,
-      "added": "2026-10-23"
+      "added": "2026-10-23",
+      "bpm": 112
     },
     {
       "id": "al-01-rainy-window",
@@ -194,7 +202,8 @@
         "wine"
       ],
       "gain": 0.9,
-      "added": "2026-10-23"
+      "added": "2026-10-23",
+      "bpm": 72
     },
     {
       "id": "al-02-missing-nights",
@@ -205,7 +214,8 @@
         "wine"
       ],
       "gain": 0.9,
-      "added": "2026-10-23"
+      "added": "2026-10-23",
+      "bpm": 80
     },
     {
       "id": "al-03-words-unsent",
@@ -216,7 +226,8 @@
         "friends"
       ],
       "gain": 0.9,
-      "added": "2026-10-23"
+      "added": "2026-10-23",
+      "bpm": 96
     },
     {
       "id": "al-04-your-season",
@@ -227,7 +238,8 @@
         "friends"
       ],
       "gain": 0.9,
-      "added": "2026-10-23"
+      "added": "2026-10-23",
+      "bpm": 76
     },
     {
       "id": "al-05-wine-glow",

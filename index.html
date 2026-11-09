@@ -75,6 +75,11 @@
   let ctx, master, decks = [], cur = 0, playing = false, history = [], wakeLock = null, advancing = false;
 
   const $ = id => document.getElementById(id);
+  // 매장 구분: ?store=cg 로 한 번 열면 이 기기에 기억 (?store= 로 해제). tracks.json slot.stores[매장]이 그 매장만 덮어씀
+  const qs = new URLSearchParams(location.search);
+  if (qs.has("store")) localStorage.setItem("tsbStore", qs.get("store").toLowerCase());
+  const STORE = localStorage.getItem("tsbStore") || "";
+  const bpmOf = t => t.bpm || +(((t.suno || "").match(/(\d{2,3})\s*BPM/i) || [])[1] || 0);
 
   async function loadLib() {
     try {
@@ -86,12 +91,15 @@
   function currentSlot() {
     let h = new Date().getHours();
     if (h < 5) h += 24;
-    return lib.slots.find(s => h >= s.from && h < s.to) || lib.slots[0] || { id: 'all', label: 'tsb radio', playlists: [] };
+    const s = lib.slots.find(s => h >= s.from && h < s.to) || lib.slots[0] || { id: 'all', label: 'tsb radio', playlists: [] };
+    const o = (s.stores || {})[STORE];
+    return o ? { ...s, ...o } : s;
   }
 
   function pickTrack() {
     const slot = currentSlot();
     let pool = lib.tracks.filter(t => t.playlists.some(p => slot.playlists.includes(p)));
+    if (slot.minBpm) { const fast = pool.filter(t => bpmOf(t) >= slot.minBpm); if (fast.length >= 5) pool = fast; }
     if (!pool.length) pool = lib.tracks.slice();
     if (!pool.length) return null;
     const recent = history.slice(-Math.min(pool.length - 1, 8));
