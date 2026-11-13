@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<base href="/radio/">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#030303">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>tapping; · 매장 음악</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap">
+<style>
+  :root{--bg:#030303;--panel:#0f0f0f;--line:rgba(255,255,255,.1);--text:#fff;--sub:#aaa;--accent:#C9A3A6;--wine:#6E1426}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{font-family:Pretendard,-apple-system,"Apple SD Gothic Neo",sans-serif;background:var(--bg);color:var(--text);
+    display:grid;grid-template-columns:minmax(0,1fr) 420px;grid-template-rows:64px minmax(0,1fr) 96px;
+    grid-template-areas:"hd hd" "art q" "bar bar";overflow:hidden;-webkit-user-select:none;user-select:none}
+  button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;border-radius:50%}
+  button:active{transform:scale(.94)}
+  svg{width:24px;height:24px;fill:currentColor}
+  #glow{position:fixed;inset:-10%;z-index:-1;background:center/cover no-repeat;filter:blur(80px) saturate(1.3);opacity:.35;transition:background-image 1s}
+  header{grid-area:hd;display:flex;align-items:center;gap:14px;padding:0 24px}
+  .logo{font-family:Montserrat,Pretendard,sans-serif;font-weight:600;font-size:22px;letter-spacing:-.01em}
+  .logo small{font-family:Pretendard,sans-serif;font-weight:400;font-size:12px;color:var(--sub);margin-left:8px;letter-spacing:.04em}
+  .chip{margin-left:auto;font-size:13px;padding:6px 12px;border-radius:8px;background:rgba(255,255,255,.1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+  .clock{font-variant-numeric:tabular-nums;color:var(--sub);font-size:15px}
+  .art{grid-area:art;display:flex;align-items:center;justify-content:center;padding:24px 48px;min-height:0}
+  .art img{width:min(100%,calc(100vh - 220px));aspect-ratio:1;object-fit:cover;border-radius:6px;box-shadow:0 12px 48px rgba(0,0,0,.6);background:#222}
+  .queue{grid-area:q;display:flex;flex-direction:column;min-height:0;padding:16px 24px 0 0}
+  .tabs{display:flex;border-bottom:1px solid var(--line)}
+  .tabs b{flex:1;text-align:center;padding:14px 0;font-size:14px;letter-spacing:.06em;border-bottom:2px solid #fff}
+  .qhead{display:flex;align-items:center;justify-content:space-between;padding:14px 8px 6px;color:var(--sub);font-size:13px}
+  #q{list-style:none;overflow-y:auto;min-height:0;flex:1;padding-bottom:12px}
+  #q li{display:flex;align-items:center;gap:12px;padding:8px;border-radius:6px;cursor:pointer}
+  #q li:hover{background:rgba(255,255,255,.08)}
+  #q li.now{background:rgba(255,255,255,.12)}
+  #q img{width:44px;height:44px;border-radius:4px;object-fit:cover;flex:none;background:#222}
+  #q .t{min-width:0;flex:1}
+  #q .t b,#q .t span{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #q .t b{font-weight:500;font-size:15px}
+  #q .t span{color:var(--sub);font-size:13px;margin-top:2px}
+  #q .d{color:var(--sub);font-size:13px;font-variant-numeric:tabular-nums}
+  .bar{grid-area:bar;position:relative;background:#212121;display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:20px;padding:0 20px}
+  .seek{position:absolute;left:0;right:0;top:-8px;height:16px;display:flex;align-items:center}
+  input[type=range]{-webkit-appearance:none;appearance:none;width:100%;background:transparent;cursor:pointer}
+  input[type=range]::-webkit-slider-runnable-track{height:4px;border-radius:2px;background:linear-gradient(90deg,var(--accent) var(--p,0%),rgba(255,255,255,.25) var(--p,0%))}
+  input[type=range]::-moz-range-track{height:4px;border-radius:2px;background:linear-gradient(90deg,var(--accent) var(--p,0%),rgba(255,255,255,.25) var(--p,0%))}
+  input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;margin-top:-6px;border-radius:50%;background:var(--accent);border:0}
+  input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--accent);border:0}
+  .ctrl{display:flex;align-items:center;gap:6px}
+  .ctrl button{width:44px;height:44px}
+  .ctrl button.big{width:56px;height:56px}
+  .ctrl button.big svg{width:40px;height:40px}
+  .ctrl button.on{color:var(--accent)}
+  .ctrl button:not(.on)#shuf{color:var(--sub)}
+  .time{color:var(--sub);font-size:13px;font-variant-numeric:tabular-nums;margin-left:8px;white-space:nowrap}
+  .mid{display:flex;align-items:center;gap:14px;min-width:0;justify-content:center}
+  .mid img{width:48px;height:48px;border-radius:4px;object-fit:cover;flex:none;background:#222}
+  .meta{min-width:0}
+  .meta h1{font-size:16px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .meta p{color:var(--sub);font-size:14px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .vol{display:flex;align-items:center;gap:8px;width:340px}
+  .vol button{width:44px;height:44px;flex:none;background:rgba(255,255,255,.1);font-size:24px;font-weight:600}
+  .vol input{flex:1;min-width:0;height:36px}
+  .vol input::-webkit-slider-runnable-track{height:8px;border-radius:4px}
+  .vol input::-moz-range-track{height:8px;border-radius:4px}
+  .vol input::-webkit-slider-thumb{width:24px;height:24px;margin-top:-8px}
+  .vol input::-moz-range-thumb{width:24px;height:24px}
+  .vol b{min-width:36px;text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+  #start{position:fixed;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:rgba(3,3,3,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  #start button{width:96px;height:96px;background:#fff;color:#000}
+  #start button svg{width:56px;height:56px}
+  #start b{font-size:20px}
+  #start p{color:var(--sub);font-size:14px;text-align:center;line-height:1.6}
+  .hidden{display:none!important}
+  /* 태블릿·모바일: 한 줄로 쌓기 (표지 → 곡 정보·조작 → 볼륨 → 다음 곡) */
+  @media (max-width:900px){
+    html,body{height:auto}
+    body{display:flex;flex-direction:column;overflow:auto;min-height:100%}
+    header{height:56px;padding:0 16px;flex:none}
+    .art{padding:8px 24px}
+    .art img{width:min(100%,46vh,520px)}
+    .queue{padding:8px 12px 24px;order:4;max-width:640px;width:100%;margin:0 auto}
+    #q{overflow:visible}
+    .bar{order:3;background:none;grid-template-columns:1fr;gap:14px;padding:8px 24px 16px;max-width:600px;width:100%;margin:0 auto}
+    .mid{order:1;justify-content:flex-start}
+    .mid img{display:none}
+    .meta h1{font-size:22px}
+    .meta p{font-size:15px}
+    .seek{order:2;position:static;height:auto;flex-direction:column;align-items:stretch}
+    .seek .tm{display:flex;justify-content:space-between;color:var(--sub);font-size:12px;margin-top:4px;font-variant-numeric:tabular-nums}
+    .ctrl{order:3;justify-content:space-between}
+    .ctrl button.big{width:72px;height:72px;background:#fff;color:#000}
+    .time{display:none}
+    .vol{order:4;width:100%}
+    .vol button{width:52px;height:52px}
+  }
+  @media (max-width:600px){.logo small{display:none}}
+  @media (min-width:901px){.seek .tm{display:none}}
+</style>
+</head>
+<body>
+<div id="glow"></div>
+<header>
+  <div class="logo">tapping;<small>TAP SHOP BAR · 매장 음악</small></div>
+  <div class="chip" id="slot">loading</div>
+  <div class="clock" id="clock">--:--</div>
+</header>
+
+<div class="art"><img id="art" alt="" src="art/tapping.png"></div>
+
+<aside class="queue">
+  <div class="tabs"><b>다음 곡</b></div>
+  <div class="qhead"><span id="qlabel">재생 대기열</span><span>누르면 바로 재생</span></div>
+  <ol id="q"></ol>
+</aside>
+
+<footer class="bar">
+  <div class="seek"><input id="seek" type="range" min="0" max="1000" value="0" aria-label="재생 위치"><div class="tm"><span id="tcur2">0:00</span><span id="tdur2">0:00</span></div></div>
+  <div class="ctrl">
+    <button id="shuf" class="on" aria-label="셔플" title="셔플"><svg viewBox="0 0 24 24"><path d="M10.59 9.17 5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg></button>
+    <button id="prev" aria-label="이전 곡"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg></button>
+    <button id="pp" class="big" aria-label="재생/일시정지"><svg viewBox="0 0 24 24"><path id="ppi" d="M8 5v14l11-7z"/></svg></button>
+    <button id="next" aria-label="다음 곡"><svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg></button>
+    <span class="time"><span id="tcur">0:00</span> / <span id="tdur">0:00</span></span>
+  </div>
+  <div class="mid"><img id="mini" alt="" src="art/tapping.png"><div class="meta"><h1 id="title">tapping;</h1><p id="sub">&nbsp;</p></div></div>
+  <div class="vol">
+    <button id="vdn" aria-label="볼륨 내리기">−</button>
+    <input id="vol" type="range" min="0" max="100" step="5" value="100" aria-label="볼륨">
+    <button id="vup" aria-label="볼륨 올리기">+</button>
+    <b id="vtxt">100</b>
+  </div>
+</footer>
+
+<div id="start">
+  <button id="go" aria-label="매장 음악 시작"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+  <b>매장 음악 시작</b>
+  <p>시간대에 맞춰 자동으로 곡이 바뀝니다<br>오후 카페 · 17시 와인 · 21시 이후 모임</p>
+</div>
+
+<script>
+(() => {
+  const FADE = 4;                 // crossfade seconds
+  const REFRESH_MIN = 30;         // reload tracks.json every N minutes
+  const QLEN = 8;                 // 다음 곡 목록 길이
+  // 음량 맞추기: 곡별 lufs(tracks.json) → -12 LUFS로 맞춘 뒤 컴프레서(리미터)로 피크를 누름.
+  // 11/13 전 곡 오프라인 검사: 출력 -12.1 ~ -10.3 LUFS, 최대 피크 -1.7 dBFS, 클리핑 0
+  const TARGET = -12, MAX_BOOST_DB = 6, DEFAULT_LUFS = -14.5, POST_DB = -1;
+  const ART = ['art/tapping.png', 'art/cg_004.jpg', 'art/cg_006.jpg', 'art/cg_009.jpg', 'art/cg_021.jpg', 'art/cg_024.jpg', 'art/cg_029.jpg'];
+  let lib = { slots: [], tracks: [] };
+  let ctx, master, decks = [], cur = 0, playing = false, history = [], wakeLock = null, advancing = false;
+  let queue = [], qKey = '', shuffle = localStorage.getItem('tsbShuffle') !== '0', nowT = null, seeking = false;
+
+  const $ = id => document.getElementById(id);
+  // 매장 구분: ?store=cg 로 한 번 열면 이 기기에 기억 (?store= 로 해제). tracks.json slot.stores[매장]이 그 매장만 덮어씀
+  const qs = new URLSearchParams(location.search);
+  if (qs.has("store")) localStorage.setItem("tsbStore", qs.get("store").toLowerCase());
+  const STORE = localStorage.getItem("tsbStore") || "";
+  const bpmOf = t => t.bpm || +(((t.suno || "").match(/(\d{2,3})\s*BPM/i) || [])[1] || 0);
+  const artOf = t => t.cover || ART[[...t.id].reduce((a, c) => a + c.charCodeAt(0), 0) % ART.length];
+  const normGain = t => Math.min(Math.pow(10, (TARGET - (t.lufs ?? DEFAULT_LUFS)) / 20), Math.pow(10, MAX_BOOST_DB / 20)) * (t.gain || 1);
+  const fmt = s => isFinite(s) ? Math.floor(s / 60) + ':' + String(Math.floor(s % 60)).padStart(2, '0') : '0:00';
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  async function loadLib() {
+    try {
+      const r = await fetch('tracks.json?t=' + Date.now(), { cache: 'no-store' });
+      if (r.ok) lib = await r.json();
+    } catch (e) { /* keep previous list when offline */ }
+  }
+
+  function currentSlot() {
+    let h = new Date().getHours();
+    if (h < 5) h += 24;
+    const s = lib.slots.find(s => h >= s.from && h < s.to) || lib.slots[0] || { id: 'all', label: 'tapping;', playlists: [] };
+    const o = (s.stores || {})[STORE];
+    return o ? { ...s, ...o } : s;
+  }
+
+  function slotPool() {
+    const slot = currentSlot();
+    let pool = lib.tracks.filter(t => t.playlists.some(p => slot.playlists.includes(p)));
+    if (slot.minBpm) { const fast = pool.filter(t => bpmOf(t) >= slot.minBpm); if (fast.length >= 5) pool = fast; }
+    if (!pool.length) pool = lib.tracks.slice();
+    return pool;
+  }
+
+  // 대기열: 시간대(매장 규칙 포함)가 바뀌면 새로 만들고, 모자라면 채운다
+  function fillQueue() {
+    const slot = currentSlot(), key = slot.id + '|' + slot.label + '|' + (slot.minBpm || '');
+    const pool = slotPool();
+    if (key !== qKey) { queue = []; qKey = key; }
+    queue = queue.filter(t => pool.some(p => p.id === t.id));
+    while (queue.length < Math.min(QLEN, pool.length)) {
+      let t;
+      if (shuffle) {
+        const recent = history.slice(-Math.min(pool.length - 1, 8));
+        const notQ = pool.filter(p => !queue.some(q => q.id === p.id) && !(nowT && p.id === nowT.id));
+        const fresh = notQ.filter(p => !recent.includes(p.id));
+        const list = fresh.length ? fresh : (notQ.length ? notQ : pool);
+        t = list[Math.floor(Math.random() * list.length)];
+      } else {
+        const last = queue[queue.length - 1] || nowT;
+        t = pool[(pool.findIndex(p => last && p.id === last.id) + 1) % pool.length];
+      }
+      queue.push(t);
+    }
+    renderQueue();
+  }
+
+  function renderQueue() {
+    $('qlabel').textContent = currentSlot().label;
+    const rows = (nowT ? [nowT] : []).concat(queue);
+    $('q').innerHTML = rows.map((t, i) =>
+      `<li data-i="${i - (nowT ? 1 : 0)}" class="${nowT && i === 0 ? 'now' : ''}"><img src="${esc(artOf(t))}" alt="" loading="lazy">` +
+      `<div class="t"><b>${esc(t.title)}</b><span>${nowT && i === 0 ? '지금 재생 중' : esc((t.playlists || []).join(' · '))}</span></div>` +
+      `<span class="d">${bpmOf(t) ? bpmOf(t) + ' BPM' : ''}</span></li>`).join('');
+  }
+
+  function makeDeck() {
+    const a = new Audio();
+    a.preload = 'auto';
+    a.crossOrigin = 'anonymous';
+    const src = ctx.createMediaElementSource(a);
+    const g = ctx.createGain();
+    g.gain.value = 0;
+    src.connect(g).connect(master.input);
+    const d = { a, g, track: null };
+    a.addEventListener('timeupdate', () => onTime(d));
+    a.addEventListener('ended', () => { if (d === decks[cur]) advance(); });
+    a.addEventListener('error', () => { if (d === decks[cur]) setTimeout(advance, 3000); });
+    return d;
+  }
+
+  function setP(el, frac) { el.style.setProperty('--p', (100 * frac) + '%'); }
+
+  function onTime(d) {
+    if (d !== decks[cur] || !d.a.duration) return;
+    const c = d.a.currentTime, D = d.a.duration;
+    if (!seeking) { $('seek').value = Math.round(1000 * c / D); setP($('seek'), c / D); }
+    $('tcur').textContent = $('tcur2').textContent = fmt(c);
+    $('tdur').textContent = $('tdur2').textContent = fmt(D);
+    if (D - c < FADE && !advancing) advance();
+  }
+
+  function showNow(t) {
+    const slot = currentSlot();
+    $('slot').textContent = slot.label;
+    $('title').textContent = t ? t.title : '곡을 준비 중입니다';
+    $('sub').textContent = t ? 'tapping; • ' + slot.label : '';
+    if (t) { $('art').src = $('mini').src = artOf(t); $('glow').style.backgroundImage = `url("${artOf(t)}")`; }
+    renderQueue();
+  }
+
+  async function playTrack(t, remember = true) {
+    if (!t) { showNow(null); return; }
+    advancing = true;
+    const prev = decks[cur];
+    cur = 1 - cur;
+    const d = decks[cur];
+    d.track = t;
+    d.a.src = t.file;
+    d.a.currentTime = 0;
+    if (!playing) { await ctx.resume(); playing = true; setPP(); }
+    const now = ctx.currentTime;
+    d.g.gain.cancelScheduledValues(now);
+    d.g.gain.setValueAtTime(0, now);
+    try { await d.a.play(); } catch (e) { advancing = false; setTimeout(advance, 3000); return; }
+    d.g.gain.linearRampToValueAtTime(normGain(t), now + FADE);
+    if (prev && prev.track) {
+      prev.g.gain.cancelScheduledValues(now);
+      prev.g.gain.setValueAtTime(prev.g.gain.value, now);
+      prev.g.gain.linearRampToValueAtTime(0, now + FADE);
+      setTimeout(() => { if (decks[cur] !== prev) prev.a.pause(); }, FADE * 1000 + 200);
+    }
+    nowT = t;
+    if (remember) { history.push(t.id); if (history.length > 50) history.shift(); }
+    showNow(t);
+    if ('mediaSession' in navigator) {
+      navigator.mediaSession.metadata = new MediaMetadata({ title: t.title, artist: 'tapping;', album: currentSlot().label, artwork: [{ src: new URL(artOf(t), document.baseURI).href, sizes: '720x720' }] });
+    }
+    setTimeout(() => { advancing = false; }, FADE * 1000 + 500);
+  }
+
+  function advance() {
+    if (advancing) return;
+    advancing = true;
+    fillQueue();
+    const t = queue.shift();
+    advancing = false;
+    playTrack(t);
+    fillQueue();
+  }
+
+  function back() {
+    const d = decks[cur];
+    if (d && d.a.currentTime > 5) { d.a.currentTime = 0; return; }
+    if (history.length < 2) { if (d) d.a.currentTime = 0; return; }
+    const curId = history.pop(), prevId = history[history.length - 1];
+    const t = lib.tracks.find(x => x.id === prevId), c = lib.tracks.find(x => x.id === curId);
+    if (!t) return;
+    if (c) queue.unshift(c);
+    queue = queue.slice(0, QLEN);
+    advancing = false;
+    playTrack(t, false);
+  }
+
+  function setPP() { $('ppi').setAttribute('d', playing ? 'M6 19h4V5H6v14zm8-14v14h4V5h-4z' : 'M8 5v14l11-7z'); }
+
+  async function keepAwake() {
+    try { if ('wakeLock' in navigator) wakeLock = await navigator.wakeLock.request('screen'); } catch (e) {}
+  }
+
+  // 출력: 곡 gain → 컴프레서(피크 제한) → -1 dB → 볼륨 → 스피커
+  function makeMaster() {
+    const input = ctx.createDynamicsCompressor();
+    input.threshold.value = -10; input.knee.value = 6; input.ratio.value = 6; input.attack.value = 0.003; input.release.value = 0.25;
+    const post = ctx.createGain(); post.gain.value = Math.pow(10, POST_DB / 20);
+    const vol = ctx.createGain(); vol.gain.value = $('vol').value / 100;
+    input.connect(post).connect(vol).connect(ctx.destination);
+    return { input, vol };
+  }
+
+  async function start() {
+    ctx = new (window.AudioContext || window.webkitAudioContext)();
+    master = makeMaster();
+    decks = [makeDeck(), makeDeck()];
+    await ctx.resume();
+    $('start').classList.add('hidden');
+    playing = true; setPP();
+    keepAwake();
+    advance();
+  }
+
+  // 볼륨: 화면 슬라이더·± 버튼, 기본 100, 이 기기에 기억
+  const setVol = v => {
+    v = Math.max(0, Math.min(100, Math.round(v)));
+    $('vol').value = v; setP($('vol'), v / 100); $('vtxt').textContent = v;
+    localStorage.setItem('tsbVol', v);
+    if (master) master.vol.gain.setTargetAtTime(v / 100, ctx.currentTime, 0.05);
+  };
+  setVol(+(localStorage.getItem('tsbVol') ?? 100));
+  $('vol').oninput = e => setVol(+e.target.value);
+  $('vdn').onclick = () => setVol(+$('vol').value - 10);
+  $('vup').onclick = () => setVol(+$('vol').value + 10);
+
+  $('go').onclick = start;
+  $('next').onclick = () => { if (ctx) { advancing = false; advance(); } };
+  $('prev').onclick = () => { if (ctx) back(); };
+  $('pp').onclick = async () => {
+    if (!ctx) return start();
+    if (playing) await ctx.suspend(); else await ctx.resume();
+    playing = !playing; setPP();
+  };
+  $('shuf').onclick = () => {
+    shuffle = !shuffle; localStorage.setItem('tsbShuffle', shuffle ? '1' : '0');
+    $('shuf').classList.toggle('on', shuffle); queue = []; fillQueue();
+  };
+  $('shuf').classList.toggle('on', shuffle);
+  $('q').onclick = e => {
+    const li = e.target.closest('li'); if (!li || !ctx) return;
+    const i = +li.dataset.i; if (i < 0) return;
+    const [t] = queue.splice(i, 1); advancing = false; playTrack(t); fillQueue();
+  };
+  $('seek').oninput = e => { seeking = true; setP(e.target, e.target.value / 1000); };
+  $('seek').onchange = e => {
+    const d = decks[cur]; seeking = false;
+    if (d && d.a.duration) d.a.currentTime = Math.min(d.a.duration - FADE - 1, d.a.duration * e.target.value / 1000);
+  };
+  if ('mediaSession' in navigator) {
+    navigator.mediaSession.setActionHandler('nexttrack', () => $('next').onclick());
+    navigator.mediaSession.setActionHandler('previoustrack', () => $('prev').onclick());
+  }
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') keepAwake(); });
+
+  function tick() {
+    const d = new Date();
+    $('clock').textContent = d.toTimeString().slice(0, 5);
+    $('slot').textContent = currentSlot().label;
+    fillQueue();
+  }
+  setInterval(tick, 10000);
+  setInterval(loadLib, REFRESH_MIN * 60 * 1000);
+  loadLib().then(tick);
+})();
+</script>
+</body>
+</html>
