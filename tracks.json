@@ -53,7 +53,8 @@
       "gain": 1.0,
       "suno": "TSB 하루 · the day (v6, 3:24)",
       "added": "2026-10-18",
-      "bpm": 84
+      "bpm": 84,
+      "lufs": -13.1
     },
     {
       "id": "2026-10-18-3pm",
@@ -65,7 +66,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 오후 세 시 · 3pm (v6, lo-fi jazz 82 BPM)",
-      "added": "2026-10-18"
+      "added": "2026-10-18",
+      "lufs": -14.6
     },
     {
       "id": "2026-10-18-window-seat",
@@ -77,7 +79,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 창가 자리 · window seat (v6, bossa nova 92 BPM)",
-      "added": "2026-10-18"
+      "added": "2026-10-18",
+      "lufs": -15.1
     },
     {
       "id": "2026-10-18-first-glass",
@@ -88,7 +91,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 첫 잔 · first glass (v6, jazz house 104 BPM)",
-      "added": "2026-10-18"
+      "added": "2026-10-18",
+      "lufs": -12.9
     },
     {
       "id": "2026-10-18-bubbles",
@@ -100,7 +104,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 버블 · bubbles (v6, city pop 108 BPM)",
-      "added": "2026-10-18"
+      "added": "2026-10-18",
+      "lufs": -14.3
     },
     {
       "id": "2026-10-18-friday-night",
@@ -111,7 +116,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 금요일 밤 · friday night (v6, nu-disco 118 BPM)",
-      "added": "2026-10-18"
+      "added": "2026-10-18",
+      "lufs": -13.2
     },
     {
       "id": "2026-10-19-wine-glow",
@@ -122,7 +128,8 @@
       ],
       "gain": 0.9,
       "suno": "TSB 와인빛 · wine glow (v6, K-pop electropop 128 BPM, vocal, 2:47)",
-      "added": "2026-10-19"
+      "added": "2026-10-19",
+      "lufs": -14.6
     },
     {
       "id": "2026-10-19-underline",
@@ -134,7 +141,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 밑줄 · underline (v6, lo-fi jazz hop + bossa 80 BPM, 3:10)",
-      "added": "2026-10-19"
+      "added": "2026-10-19",
+      "lufs": -14.7
     },
     {
       "id": "2026-10-19-six-thirty",
@@ -145,7 +153,8 @@
       ],
       "gain": 0.9,
       "suno": "TSB 여섯 시 반 · six thirty (v6, R&B/neo-soul 88 BPM, vocal KR, 2:43)",
-      "added": "2026-10-19"
+      "added": "2026-10-19",
+      "lufs": -14.1
     },
     {
       "id": "2026-10-20-focal-point",
@@ -157,7 +166,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 초점 · focal point (v6, lo-fi jazz + bossa 84 BPM, v2 3:18)",
-      "added": "2026-10-20"
+      "added": "2026-10-20",
+      "lufs": -14.6
     },
     {
       "id": "2026-10-20-seoul-lights",
@@ -169,7 +179,8 @@
       ],
       "gain": 0.9,
       "suno": "TSB 서울 불빛 · seoul lights (v6, 80s city pop 104 BPM, vocal EN, v1 2:43)",
-      "added": "2026-10-20"
+      "added": "2026-10-20",
+      "lufs": -16.1
     },
     {
       "id": "2026-10-23-clink",
@@ -179,7 +190,8 @@
         "friends"
       ],
       "gain": 1.0,
-      "added": "2026-10-23"
+      "added": "2026-10-23",
+      "lufs": -15.0
     },
     {
       "id": "2026-10-23-our-usual-spot",
@@ -191,7 +203,8 @@
       ],
       "gain": 0.9,
       "added": "2026-10-23",
-      "bpm": 112
+      "bpm": 112,
+      "lufs": -15.5
     },
     {
       "id": "al-01-rainy-window",
@@ -203,7 +216,8 @@
       ],
       "gain": 0.9,
       "added": "2026-10-23",
-      "bpm": 72
+      "bpm": 72,
+      "lufs": -13.5
     },
     {
       "id": "al-02-missing-nights",
@@ -215,7 +229,8 @@
       ],
       "gain": 0.9,
       "added": "2026-10-23",
-      "bpm": 80
+      "bpm": 80,
+      "lufs": -13.9
     },
     {
       "id": "al-03-words-unsent",
@@ -227,7 +242,8 @@
       ],
       "gain": 0.9,
       "added": "2026-10-23",
-      "bpm": 96
+      "bpm": 96,
+      "lufs": -14.2
     },
     {
       "id": "al-04-your-season",
@@ -239,7 +255,8 @@
       ],
       "gain": 0.9,
       "added": "2026-10-23",
-      "bpm": 76
+      "bpm": 76,
+      "lufs": -15.4
     },
     {
       "id": "al-05-wine-glow",
@@ -250,7 +267,8 @@
         "alone"
       ],
       "gain": 0.9,
-      "added": "2026-10-23"
+      "added": "2026-10-23",
+      "lufs": -14.8
     },
     {
       "id": "2026-10-24-the-cellar",
@@ -262,7 +280,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 와인 셀러 · the cellar (v6, vintage jazz trio + tenor sax 88 BPM) · FALL IN WINE",
-      "added": "2026-10-25"
+      "added": "2026-10-25",
+      "lufs": -14.5
     },
     {
       "id": "2026-10-24-leaves-and-a-glass",
@@ -274,7 +293,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 낙엽 위의 잔 · leaves and a glass (v6, muted trumpet cool jazz ballad 74 BPM) · FALL IN WINE",
-      "added": "2026-10-25"
+      "added": "2026-10-25",
+      "lufs": -14.3
     },
     {
       "id": "2026-10-24-burgundy",
@@ -286,7 +306,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 버건디 · burgundy (v6, swing jazz quartet 96 BPM) · FALL IN WINE",
-      "added": "2026-10-25"
+      "added": "2026-10-25",
+      "lufs": -14.6
     },
     {
       "id": "2026-10-24-slow-pour",
@@ -298,7 +319,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 천천히 따르기 · slow pour (v6, jazz waltz piano trio 78 BPM) · FALL IN WINE",
-      "added": "2026-10-25"
+      "added": "2026-10-25",
+      "lufs": -14.9
     },
     {
       "id": "2026-10-25-vineyard-afternoon",
@@ -310,7 +332,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 포도밭 오후 · vineyard afternoon (v6, bossa jazz tenor sax + nylon guitar 92 BPM) · FALL IN WINE",
-      "added": "2026-10-25"
+      "added": "2026-10-25",
+      "lufs": -15.2
     },
     {
       "id": "2026-10-25-old-label",
@@ -322,7 +345,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 오래된 레이블 · old label (v6, bluesy piano trio 84 BPM) · FALL IN WINE",
-      "added": "2026-10-25"
+      "added": "2026-10-25",
+      "lufs": -14.3
     },
     {
       "id": "2026-10-25-by-candlelight",
@@ -334,7 +358,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 촛불 옆 · by candlelight (v6, flugelhorn jazz ballad 72 BPM) · FALL IN WINE",
-      "added": "2026-10-25"
+      "added": "2026-10-25",
+      "lufs": -15.5
     },
     {
       "id": "2026-10-25-autumn-stroll",
@@ -346,7 +371,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 가을 산책 · autumn stroll (v6, jazz guitar trio medium swing 100 BPM) · FALL IN WINE",
-      "added": "2026-10-25"
+      "added": "2026-10-25",
+      "lufs": -15.4
     },
     {
       "id": "2026-10-24-slow-saturday",
@@ -358,7 +384,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 느린 토요일 · slow saturday (v6, 80s sophisti-pop vocal (EN) 98 BPM, autumn voice)",
-      "added": "2026-10-25"
+      "added": "2026-10-25",
+      "lufs": -14.5
     },
     {
       "id": "2026-10-25-tell-me-more",
@@ -370,7 +397,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 얘기 더 해 줘 · tell me more (v6, 80s city funk pop vocal (KO) 104 BPM, autumn voice)",
-      "added": "2026-10-25"
+      "added": "2026-10-25",
+      "lufs": -15.5
     },
     {
       "id": "2026-10-26-decanter",
@@ -382,7 +410,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 디캔터 · decanter (v6, vibraphone jazz quartet 96 BPM · FALL IN WINE)",
-      "added": "2026-10-26"
+      "added": "2026-10-26",
+      "lufs": -14.9
     },
     {
       "id": "2026-10-26-red-note",
@@ -394,7 +423,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 레드 노트 · red note (v6, soul jazz organ trio 88 BPM · FALL IN WINE)",
-      "added": "2026-10-26"
+      "added": "2026-10-26",
+      "lufs": -15.0
     },
     {
       "id": "2026-10-26-lingering-warmth",
@@ -406,7 +436,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 남은 온기 · lingering warmth (v6, muted trumpet ballad 70 BPM · FALL IN WINE)",
-      "added": "2026-10-26"
+      "added": "2026-10-26",
+      "lufs": -15.4
     },
     {
       "id": "2026-10-26-maple-road",
@@ -418,7 +449,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 단풍길 · maple road (v6, clarinet swing quartet 100 BPM · FALL IN WINE)",
-      "added": "2026-10-26"
+      "added": "2026-10-26",
+      "lufs": -14.9
     },
     {
       "id": "2026-10-26-stay-a-little-longer",
@@ -430,7 +462,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 조금만 더 · stay a little longer (v6, 80s synth-pop ballad vocal (EN) 92 BPM, autumn voice)",
-      "added": "2026-10-26"
+      "added": "2026-10-26",
+      "lufs": -16.0
     },
     {
       "id": "2026-10-27-table-for-two",
@@ -442,7 +475,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 두 사람의 테이블 · table for two (v6, piano + upright bass duo 76 BPM · FALL IN WINE)",
-      "added": "2026-10-27"
+      "added": "2026-10-27",
+      "lufs": -15.3
     },
     {
       "id": "2026-10-27-autumn-window",
@@ -454,7 +488,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 가을 창문 · autumn window (v6, bossa nova nylon guitar + flute 92 BPM · FALL IN WINE)",
-      "added": "2026-10-27"
+      "added": "2026-10-27",
+      "lufs": -15.1
     },
     {
       "id": "2026-10-27-amber-hour",
@@ -466,7 +501,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 호박빛 · amber hour (v6, alto sax ballad piano trio 72 BPM · FALL IN WINE)",
-      "added": "2026-10-27"
+      "added": "2026-10-27",
+      "lufs": -15.6
     },
     {
       "id": "2026-10-27-the-cork",
@@ -478,7 +514,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 코르크 · the cork (v6, medium swing sextet 98 BPM · FALL IN WINE)",
-      "added": "2026-10-27"
+      "added": "2026-10-27",
+      "lufs": -14.7
     },
     {
       "id": "2026-10-27-instead-of-coffee",
@@ -490,7 +527,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 커피 대신 · instead of coffee (v6, neo-soul pop vocal (KO, male) 84 BPM)",
-      "added": "2026-10-27"
+      "added": "2026-10-27",
+      "lufs": -14.6
     },
     {
       "id": "2026-10-29-last-leaf",
@@ -502,7 +540,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 마지막 잎 · last leaf (v6, flugelhorn quartet ballad 72 BPM · FALL IN WINE)",
-      "added": "2026-10-30"
+      "added": "2026-10-30",
+      "lufs": -15
     },
     {
       "id": "2026-10-30-end-of-october",
@@ -514,7 +553,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 시월의 끝 · end of october (v6, clarinet + piano trio ballad 70 BPM · FALL IN WINE)",
-      "added": "2026-10-30"
+      "added": "2026-10-30",
+      "lufs": -15.6
     },
     {
       "id": "2026-10-29-how-was-your-day",
@@ -526,7 +566,8 @@
       ],
       "gain": 1.0,
       "suno": "TSB 오늘 어땠어 · how was your day (v6, acoustic folk-pop vocal (KO) 90 BPM, autumn voice)",
-      "added": "2026-10-30"
+      "added": "2026-10-30",
+      "lufs": -15.7
     },
     {
       "id": "2026-10-31-rainy-night",
@@ -538,7 +579,8 @@
       ],
       "gain": 1.0,
       "suno": "비 내리는 밤 · rainy night (v6, slow rainy-night jazz ballad, tenor sax + piano trio 66 BPM · SLOW NIGHTS)",
-      "added": "2026-10-31"
+      "added": "2026-10-31",
+      "lufs": -15.1
     },
     {
       "id": "2026-10-30-the-long-way-home",
@@ -550,7 +592,8 @@
       ],
       "gain": 1.0,
       "suno": "먼 길로 돌아가자 · the long way home (v6, jazz-pop + 80s AOR vocal (EN) 96 BPM, autumn voice)",
-      "added": "2026-10-31"
+      "added": "2026-10-31",
+      "lufs": -14.8
     },
     {
       "id": "2026-10-31-sound-of-rain",
@@ -562,7 +605,8 @@
       ],
       "gain": 1.0,
       "suno": "빗소리 · sound of rain (v6, slow piano-led jazz ballad, felt piano + bass + brushes 72 BPM · SLOW NIGHTS)",
-      "added": "2026-11-01"
+      "added": "2026-11-01",
+      "lufs": -15.8
     },
     {
       "id": "2026-10-31-under-one-umbrella",
@@ -574,7 +618,8 @@
       ],
       "gain": 1.0,
       "suno": "우산 같이 쓸래 · under one umbrella (v6, lo-fi soul pop + 80s retro vocal (KO) 84 BPM, autumn voice)",
-      "added": "2026-11-01"
+      "added": "2026-11-01",
+      "lufs": -15.7
     },
     {
       "id": "2026-11-01-neon-in-the-rain",
@@ -586,7 +631,8 @@
       ],
       "gain": 1.0,
       "suno": "빗속의 네온 · neon in the rain (v6, slow rainy-night jazz ballad, muted trumpet + piano trio 64 BPM · SLOW NIGHTS)",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "lufs": -15.1
     },
     {
       "id": "2026-11-01-take-your-time",
@@ -598,7 +644,8 @@
       ],
       "gain": 1.0,
       "suno": "천천히 와도 돼 · take your time (v6, bossa soul pop + 80s retro vocal (KO) 92 BPM, autumn voice)",
-      "added": "2026-11-02"
+      "added": "2026-11-02",
+      "lufs": -14.8
     },
     {
       "id": "2026-11-01-after-the-rain",
@@ -610,7 +657,8 @@
       ],
       "gain": 1.0,
       "suno": "비 그친 뒤 · after the rain (v6, SLOW NIGHTS tenor sax + jazz guitar bossa ballad 78 BPM, instrumental)",
-      "added": "2026-11-03"
+      "added": "2026-11-03",
+      "lufs": -15.6
     },
     {
       "id": "2026-11-02-the-last-bus",
@@ -622,7 +670,8 @@
       ],
       "gain": 1.0,
       "suno": "늦은 버스 · the last bus (v6, SLOW NIGHTS nylon guitar + felt piano jazz ballad 72 BPM, instrumental)",
-      "added": "2026-11-05"
+      "added": "2026-11-05",
+      "lufs": -14.8
     },
     {
       "id": "2026-11-03-rain-before-dawn",
@@ -634,7 +683,8 @@
       ],
       "gain": 1.0,
       "suno": "새벽 비 · rain before dawn (v6, SLOW NIGHTS soprano sax + piano trio closing jazz ballad 62 BPM, instrumental)",
-      "added": "2026-11-06"
+      "added": "2026-11-06",
+      "lufs": -15.6
     },
     {
       "id": "2026-11-03-let-me-pour-tonight",
@@ -646,7 +696,8 @@
       ],
       "gain": 1.0,
       "suno": "오늘은 내가 따를게 · let me pour tonight (v6, Korean 80s soft rock ballad + city pop 80 BPM, TSB radio · autumn voice)",
-      "added": "2026-11-07"
+      "added": "2026-11-07",
+      "lufs": -16.1
     },
     {
       "id": "2026-11-08-misted-window",
@@ -658,7 +709,8 @@
       ],
       "gain": 1.0,
       "suno": "김 서린 창 · misted window (v6, slow intimate jazz ballad 70 BPM, felt piano + vibraphone, SLOW NIGHTS bonus)",
-      "added": "2026-11-08"
+      "added": "2026-11-08",
+      "lufs": -16.2
     },
     {
       "id": "2026-11-06-your-name-on-the-window",
@@ -670,7 +722,8 @@
       ],
       "gain": 1.0,
       "suno": "창문에 쓴 이름 · your name on the window (v6, English 80s synth-pop ballad 84 BPM, TSB radio · autumn voice)",
-      "added": "2026-11-08"
+      "added": "2026-11-08",
+      "lufs": -14.9
     }
   ]
 }
