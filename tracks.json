@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08",
+  "updated": "2026-11-18",
   "slots": [
     {
       "id": "day",
@@ -50,7 +50,7 @@
         "study",
         "alone"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 하루 · the day (v6, 3:24)",
       "added": "2026-10-18",
       "bpm": 84,
@@ -64,7 +64,7 @@
         "study",
         "focus"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 오후 세 시 · 3pm (v6, lo-fi jazz 82 BPM)",
       "added": "2026-10-18",
       "lufs": -14.6
@@ -77,7 +77,7 @@
         "weekend",
         "study"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 창가 자리 · window seat (v6, bossa nova 92 BPM)",
       "added": "2026-10-18",
       "lufs": -15.1
@@ -89,7 +89,7 @@
       "playlists": [
         "wine"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 첫 잔 · first glass (v6, jazz house 104 BPM)",
       "added": "2026-10-18",
       "lufs": -12.9
@@ -102,7 +102,7 @@
         "wine",
         "friends"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 버블 · bubbles (v6, city pop 108 BPM)",
       "added": "2026-10-18",
       "lufs": -14.3
@@ -114,7 +114,7 @@
       "playlists": [
         "friends"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 금요일 밤 · friday night (v6, nu-disco 118 BPM)",
       "added": "2026-10-18",
       "lufs": -13.2
@@ -139,7 +139,7 @@
         "study",
         "focus"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 밑줄 · underline (v6, lo-fi jazz hop + bossa 80 BPM, 3:10)",
       "added": "2026-10-19",
       "lufs": -14.7
@@ -164,7 +164,7 @@
         "focus",
         "study"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 초점 · focal point (v6, lo-fi jazz + bossa 84 BPM, v2 3:18)",
       "added": "2026-10-20",
       "lufs": -14.6
@@ -189,9 +189,9 @@
       "playlists": [
         "friends"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "added": "2026-10-23",
-      "lufs": -15.0
+      "lufs": -15
     },
     {
       "id": "2026-10-23-our-usual-spot",
@@ -278,7 +278,7 @@
         "wine",
         "alone"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 와인 셀러 · the cellar (v6, vintage jazz trio + tenor sax 88 BPM) · FALL IN WINE",
       "added": "2026-10-25",
       "lufs": -14.5
@@ -291,7 +291,7 @@
         "wine",
         "alone"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 낙엽 위의 잔 · leaves and a glass (v6, muted trumpet cool jazz ballad 74 BPM) · FALL IN WINE",
       "added": "2026-10-25",
       "lufs": -14.3
@@ -304,7 +304,7 @@
         "wine",
         "friends"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 버건디 · burgundy (v6, swing jazz quartet 96 BPM) · FALL IN WINE",
       "added": "2026-10-25",
       "lufs": -14.6
@@ -317,7 +317,7 @@
         "wine",
         "study"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 천천히 따르기 · slow pour (v6, jazz waltz piano trio 78 BPM) · FALL IN WINE",
       "added": "2026-10-25",
       "lufs": -14.9
@@ -330,7 +330,7 @@
         "weekend",
         "wine"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 포도밭 오후 · vineyard afternoon (v6, bossa jazz tenor sax + nylon guitar 92 BPM) · FALL IN WINE",
       "added": "2026-10-25",
       "lufs": -15.2
@@ -343,7 +343,7 @@
         "alone",
         "wine"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 오래된 레이블 · old label (v6, bluesy piano trio 84 BPM) · FALL IN WINE",
       "added": "2026-10-25",
       "lufs": -14.3
@@ -356,7 +356,7 @@
         "alone",
         "wine"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 촛불 옆 · by candlelight (v6, flugelhorn jazz ballad 72 BPM) · FALL IN WINE",
       "added": "2026-10-25",
       "lufs": -15.5
@@ -369,7 +369,7 @@
         "weekend",
         "study"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 가을 산책 · autumn stroll (v6, jazz guitar trio medium swing 100 BPM) · FALL IN WINE",
       "added": "2026-10-25",
       "lufs": -15.4
@@ -382,7 +382,7 @@
         "weekend",
         "wine"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 느린 토요일 · slow saturday (v6, 80s sophisti-pop vocal (EN) 98 BPM, autumn voice)",
       "added": "2026-10-25",
       "lufs": -14.5
@@ -395,7 +395,7 @@
         "wine",
         "friends"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 얘기 더 해 줘 · tell me more (v6, 80s city funk pop vocal (KO) 104 BPM, autumn voice)",
       "added": "2026-10-25",
       "lufs": -15.5
@@ -408,7 +408,7 @@
         "wine",
         "friends"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 디캔터 · decanter (v6, vibraphone jazz quartet 96 BPM · FALL IN WINE)",
       "added": "2026-10-26",
       "lufs": -14.9
@@ -421,10 +421,10 @@
         "wine",
         "friends"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 레드 노트 · red note (v6, soul jazz organ trio 88 BPM · FALL IN WINE)",
       "added": "2026-10-26",
-      "lufs": -15.0
+      "lufs": -15
     },
     {
       "id": "2026-10-26-lingering-warmth",
@@ -434,7 +434,7 @@
         "alone",
         "wine"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 남은 온기 · lingering warmth (v6, muted trumpet ballad 70 BPM · FALL IN WINE)",
       "added": "2026-10-26",
       "lufs": -15.4
@@ -447,7 +447,7 @@
         "weekend",
         "study"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 단풍길 · maple road (v6, clarinet swing quartet 100 BPM · FALL IN WINE)",
       "added": "2026-10-26",
       "lufs": -14.9
@@ -460,10 +460,10 @@
         "wine",
         "alone"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 조금만 더 · stay a little longer (v6, 80s synth-pop ballad vocal (EN) 92 BPM, autumn voice)",
       "added": "2026-10-26",
-      "lufs": -16.0
+      "lufs": -16
     },
     {
       "id": "2026-10-27-table-for-two",
@@ -473,7 +473,7 @@
         "wine",
         "alone"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 두 사람의 테이블 · table for two (v6, piano + upright bass duo 76 BPM · FALL IN WINE)",
       "added": "2026-10-27",
       "lufs": -15.3
@@ -486,7 +486,7 @@
         "weekend",
         "study"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 가을 창문 · autumn window (v6, bossa nova nylon guitar + flute 92 BPM · FALL IN WINE)",
       "added": "2026-10-27",
       "lufs": -15.1
@@ -499,7 +499,7 @@
         "alone",
         "wine"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 호박빛 · amber hour (v6, alto sax ballad piano trio 72 BPM · FALL IN WINE)",
       "added": "2026-10-27",
       "lufs": -15.6
@@ -512,7 +512,7 @@
         "friends",
         "wine"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 코르크 · the cork (v6, medium swing sextet 98 BPM · FALL IN WINE)",
       "added": "2026-10-27",
       "lufs": -14.7
@@ -525,7 +525,7 @@
         "wine",
         "friends"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 커피 대신 · instead of coffee (v6, neo-soul pop vocal (KO, male) 84 BPM)",
       "added": "2026-10-27",
       "lufs": -14.6
@@ -538,7 +538,7 @@
         "alone",
         "wine"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 마지막 잎 · last leaf (v6, flugelhorn quartet ballad 72 BPM · FALL IN WINE)",
       "added": "2026-10-30",
       "lufs": -15
@@ -551,7 +551,7 @@
         "alone",
         "wine"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 시월의 끝 · end of october (v6, clarinet + piano trio ballad 70 BPM · FALL IN WINE)",
       "added": "2026-10-30",
       "lufs": -15.6
@@ -564,7 +564,7 @@
         "wine",
         "friends"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "TSB 오늘 어땠어 · how was your day (v6, acoustic folk-pop vocal (KO) 90 BPM, autumn voice)",
       "added": "2026-10-30",
       "lufs": -15.7
@@ -577,7 +577,7 @@
         "alone",
         "wine"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "비 내리는 밤 · rainy night (v6, slow rainy-night jazz ballad, tenor sax + piano trio 66 BPM · SLOW NIGHTS)",
       "added": "2026-10-31",
       "lufs": -15.1
@@ -590,7 +590,7 @@
         "wine",
         "friends"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "먼 길로 돌아가자 · the long way home (v6, jazz-pop + 80s AOR vocal (EN) 96 BPM, autumn voice)",
       "added": "2026-10-31",
       "lufs": -14.8
@@ -603,7 +603,7 @@
         "alone",
         "wine"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "빗소리 · sound of rain (v6, slow piano-led jazz ballad, felt piano + bass + brushes 72 BPM · SLOW NIGHTS)",
       "added": "2026-11-01",
       "lufs": -15.8
@@ -616,7 +616,7 @@
         "wine",
         "friends"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "우산 같이 쓸래 · under one umbrella (v6, lo-fi soul pop + 80s retro vocal (KO) 84 BPM, autumn voice)",
       "added": "2026-11-01",
       "lufs": -15.7
@@ -629,7 +629,7 @@
         "alone",
         "wine"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "빗속의 네온 · neon in the rain (v6, slow rainy-night jazz ballad, muted trumpet + piano trio 64 BPM · SLOW NIGHTS)",
       "added": "2026-11-02",
       "lufs": -15.1
@@ -642,7 +642,7 @@
         "wine",
         "friends"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "천천히 와도 돼 · take your time (v6, bossa soul pop + 80s retro vocal (KO) 92 BPM, autumn voice)",
       "added": "2026-11-02",
       "lufs": -14.8
@@ -655,7 +655,7 @@
         "alone",
         "wine"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "비 그친 뒤 · after the rain (v6, SLOW NIGHTS tenor sax + jazz guitar bossa ballad 78 BPM, instrumental)",
       "added": "2026-11-03",
       "lufs": -15.6
@@ -668,7 +668,7 @@
         "alone",
         "study"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "늦은 버스 · the last bus (v6, SLOW NIGHTS nylon guitar + felt piano jazz ballad 72 BPM, instrumental)",
       "added": "2026-11-05",
       "lufs": -14.8
@@ -681,7 +681,7 @@
         "alone",
         "wine"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "새벽 비 · rain before dawn (v6, SLOW NIGHTS soprano sax + piano trio closing jazz ballad 62 BPM, instrumental)",
       "added": "2026-11-06",
       "lufs": -15.6
@@ -694,7 +694,7 @@
         "friends",
         "wine"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "오늘은 내가 따를게 · let me pour tonight (v6, Korean 80s soft rock ballad + city pop 80 BPM, TSB radio · autumn voice)",
       "added": "2026-11-07",
       "lufs": -16.1
@@ -707,7 +707,7 @@
         "alone",
         "study"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "김 서린 창 · misted window (v6, slow intimate jazz ballad 70 BPM, felt piano + vibraphone, SLOW NIGHTS bonus)",
       "added": "2026-11-08",
       "lufs": -16.2
@@ -720,10 +720,222 @@
         "alone",
         "wine"
       ],
-      "gain": 1.0,
+      "gain": 1,
       "suno": "창문에 쓴 이름 · your name on the window (v6, English 80s synth-pop ballad 84 BPM, TSB radio · autumn voice)",
       "added": "2026-11-08",
       "lufs": -14.9
+    },
+    {
+      "id": "2026-11-18-xmas-snowfall-piano",
+      "title": "눈 오는 피아노 · snowfall piano",
+      "file": "music/xmas-snowfall-piano.mp3",
+      "playlists": [
+        "xmas",
+        "wine",
+        "friends"
+      ],
+      "season": "xmas",
+      "gain": 1,
+      "suno": "Stable Audio 3 (free plan, commercial license) · jazz piano trio medium swing, celesta 108 BPM · instrumental · CHRISTMAS",
+      "added": "2026-11-18",
+      "bpm": 108,
+      "lufs": -12.1,
+      "src": "stableaudio"
+    },
+    {
+      "id": "2026-11-18-xmas-fireside-swing",
+      "title": "벽난로 스윙 · fireside swing",
+      "file": "music/xmas-fireside-swing.mp3",
+      "playlists": [
+        "xmas",
+        "wine",
+        "friends"
+      ],
+      "season": "xmas",
+      "gain": 1,
+      "suno": "Stable Audio 3 (free plan, commercial license) · jazz piano trio medium swing, brushes 108 BPM · instrumental · CHRISTMAS",
+      "added": "2026-11-18",
+      "bpm": 108,
+      "lufs": -12.2,
+      "src": "stableaudio"
+    },
+    {
+      "id": "2026-11-18-xmas-winter-bossa",
+      "title": "겨울 보사 · winter bossa",
+      "file": "music/xmas-winter-bossa.mp3",
+      "playlists": [
+        "xmas",
+        "wine",
+        "friends"
+      ],
+      "season": "xmas",
+      "gain": 1,
+      "suno": "Stable Audio 3 (free plan, commercial license) · bossa nova nylon guitar + flute + vibraphone 104 BPM · instrumental · CHRISTMAS",
+      "added": "2026-11-18",
+      "bpm": 104,
+      "lufs": -12.3,
+      "src": "stableaudio"
+    },
+    {
+      "id": "2026-11-18-xmas-first-snow-walk",
+      "title": "첫눈 산책 · first snow walk",
+      "file": "music/xmas-first-snow-walk.mp3",
+      "playlists": [
+        "xmas",
+        "wine",
+        "friends"
+      ],
+      "season": "xmas",
+      "gain": 1,
+      "suno": "Stable Audio 3 (free plan, commercial license) · bossa nova nylon guitar + flute 104 BPM · instrumental · CHRISTMAS",
+      "added": "2026-11-18",
+      "bpm": 104,
+      "lufs": -12.5,
+      "src": "stableaudio"
+    },
+    {
+      "id": "2026-11-18-xmas-organ-christmas",
+      "title": "오르간 크리스마스 · organ christmas",
+      "file": "music/xmas-organ-christmas.mp3",
+      "playlists": [
+        "xmas",
+        "wine",
+        "friends"
+      ],
+      "season": "xmas",
+      "gain": 1,
+      "suno": "Stable Audio 3 (free plan, commercial license) · soul jazz organ trio + tenor sax 100 BPM · instrumental · CHRISTMAS",
+      "added": "2026-11-18",
+      "bpm": 100,
+      "lufs": -13.2,
+      "src": "stableaudio"
+    },
+    {
+      "id": "2026-11-18-xmas-warm-window",
+      "title": "따뜻한 창가 · warm window",
+      "file": "music/xmas-warm-window.mp3",
+      "playlists": [
+        "xmas",
+        "wine",
+        "friends"
+      ],
+      "season": "xmas",
+      "gain": 1,
+      "suno": "Stable Audio 3 (free plan, commercial license) · soul jazz organ trio + tenor sax 100 BPM · instrumental · CHRISTMAS",
+      "added": "2026-11-18",
+      "bpm": 100,
+      "lufs": -13.4,
+      "src": "stableaudio"
+    },
+    {
+      "id": "2026-11-18-xmas-christmas-city-lights",
+      "title": "크리스마스 시티 라이트 · christmas city lights",
+      "file": "music/xmas-christmas-city-lights.mp3",
+      "playlists": [
+        "xmas",
+        "wine",
+        "friends"
+      ],
+      "season": "xmas",
+      "gain": 1,
+      "suno": "Stable Audio 3 (free plan, commercial license) · city pop instrumental, Rhodes + glockenspiel 110 BPM · instrumental · CHRISTMAS",
+      "added": "2026-11-18",
+      "bpm": 110,
+      "lufs": -12.4,
+      "src": "stableaudio"
+    },
+    {
+      "id": "2026-11-18-xmas-glittering-street",
+      "title": "반짝이는 거리 · glittering street",
+      "file": "music/xmas-glittering-street.mp3",
+      "playlists": [
+        "xmas",
+        "wine",
+        "friends"
+      ],
+      "season": "xmas",
+      "gain": 1,
+      "suno": "Stable Audio 3 (free plan, commercial license) · city pop instrumental, Rhodes + guitar 110 BPM · instrumental · CHRISTMAS",
+      "added": "2026-11-18",
+      "bpm": 110,
+      "lufs": -12.9,
+      "src": "stableaudio"
+    },
+    {
+      "id": "2026-11-18-xmas-vibraphone-snowflakes",
+      "title": "비브라폰 눈송이 · vibraphone snowflakes",
+      "file": "music/xmas-vibraphone-snowflakes.mp3",
+      "playlists": [
+        "xmas",
+        "wine",
+        "friends"
+      ],
+      "season": "xmas",
+      "gain": 1,
+      "suno": "Stable Audio 3 (free plan, commercial license) · swing jazz quartet vibraphone + guitar 106 BPM · instrumental · CHRISTMAS",
+      "added": "2026-11-18",
+      "bpm": 106,
+      "lufs": -12.1,
+      "src": "stableaudio"
+    },
+    {
+      "id": "2026-11-18-xmas-snowy-evening",
+      "title": "눈 내리는 저녁 · snowy evening",
+      "file": "music/xmas-snowy-evening.mp3",
+      "playlists": [
+        "xmas",
+        "wine",
+        "friends"
+      ],
+      "season": "xmas",
+      "gain": 1,
+      "suno": "Stable Audio 3 (free plan, commercial license) · swing jazz quartet vibraphone + guitar 106 BPM · instrumental · CHRISTMAS",
+      "added": "2026-11-18",
+      "bpm": 106,
+      "lufs": -12.1,
+      "src": "stableaudio"
+    },
+    {
+      "id": "2026-11-18-xmas-muted-trumpet-christmas",
+      "title": "뮤트 트럼펫 크리스마스 · muted trumpet christmas",
+      "file": "music/xmas-muted-trumpet-christmas.mp3",
+      "playlists": [
+        "xmas",
+        "wine",
+        "friends"
+      ],
+      "season": "xmas",
+      "gain": 1,
+      "suno": "Stable Audio 3 (free plan, commercial license) · muted trumpet + piano trio swing 102 BPM · instrumental · CHRISTMAS",
+      "added": "2026-11-18",
+      "bpm": 102,
+      "lufs": -12.1,
+      "src": "stableaudio"
+    },
+    {
+      "id": "2026-11-18-xmas-holiday-dinner",
+      "title": "연말 저녁 식탁 · holiday dinner",
+      "file": "music/xmas-holiday-dinner.mp3",
+      "playlists": [
+        "xmas",
+        "wine",
+        "friends"
+      ],
+      "season": "xmas",
+      "gain": 1,
+      "suno": "Stable Audio 3 (free plan, commercial license) · muted trumpet + piano trio swing 102 BPM · instrumental · CHRISTMAS",
+      "added": "2026-11-18",
+      "bpm": 102,
+      "lufs": -12.5,
+      "src": "stableaudio"
     }
-  ]
+  ],
+  "season": {
+    "tag": "xmas",
+    "label": "christmas",
+    "from": "11-18",
+    "to": "12-25",
+    "share": 0.75,
+    "note": "11/18 코치님 요청: 청계·동대문 크리스마스 위주. 시즌 곡 75%, 12/26부터 자동으로 빠짐. 특정 매장만: stores:[\"cg\"] 식으로"
+  }
 }

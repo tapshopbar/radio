@@ -182,17 +182,35 @@
     return o ? { ...s, ...o } : s;
   }
 
+  // 시즌 모드: tracks.json season {tag, from:"MM-DD", to:"MM-DD", share, stores?}. 기간 안이면 시즌 곡(track.season=tag)을 share 비율로 먼저 고르고,
+  // 기간 밖이면 시즌 곡은 아예 빠진다 (12/26 자동 종료). stores가 없으면 모든 기기.
+  function activeSeason() {
+    const s = lib.season; if (!s) return null;
+    const d = new Date(), n = (d.getMonth() + 1) * 100 + d.getDate(), md = x => +String(x).replace('-', '');
+    if (n < md(s.from) || n > md(s.to)) return null;
+    if (s.stores && !s.stores.includes(STORE)) return null;
+    return s;
+  }
+  const isSeasonT = t => !!t.season;
+
   function slotPool() {
-    const slot = currentSlot();
-    let pool = lib.tracks.filter(t => t.playlists.some(p => slot.playlists.includes(p)));
+    const slot = currentSlot(), sea = activeSeason();
+    const base = lib.tracks.filter(t => !isSeasonT(t));
+    let pool = base.filter(t => t.playlists.some(p => slot.playlists.includes(p)));
     if (slot.minBpm) { const fast = pool.filter(t => bpmOf(t) >= slot.minBpm); if (fast.length >= 5) pool = fast; }
+    if (!pool.length) pool = base.slice();
+    if (sea) {
+      let xs = lib.tracks.filter(t => t.season === sea.tag);
+      if (slot.minBpm) xs = xs.filter(t => bpmOf(t) >= slot.minBpm);
+      pool = pool.concat(xs);
+    }
     if (!pool.length) pool = lib.tracks.slice();
     return pool;
   }
 
   // 대기열: 시간대(매장 규칙 포함)가 바뀌면 새로 만들고, 모자라면 채운다
   function fillQueue() {
-    const slot = currentSlot(), key = slot.id + '|' + slot.label + '|' + (slot.minBpm || '');
+    const slot = currentSlot(), sea = activeSeason(), key = slot.id + '|' + slot.label + '|' + (slot.minBpm || '') + '|' + (sea ? sea.tag : '');
     const pool = slotPool();
     if (key !== qKey) { queue = []; qKey = key; }
     queue = queue.filter(t => pool.some(p => p.id === t.id));
@@ -202,7 +220,8 @@
         const recent = history.slice(-Math.min(pool.length - 1, 8));
         const notQ = pool.filter(p => !queue.some(q => q.id === p.id) && !(nowT && p.id === nowT.id));
         const fresh = notQ.filter(p => !recent.includes(p.id));
-        const list = fresh.length ? fresh : (notQ.length ? notQ : pool);
+        let list = fresh.length ? fresh : (notQ.length ? notQ : pool);
+        if (sea) { const lx = list.filter(isSeasonT), lo = list.filter(p => !isSeasonT(p)); if (lx.length && (!lo.length || Math.random() < (sea.share ?? 0.75))) list = lx; else if (lo.length) list = lo; }
         t = list[Math.floor(Math.random() * list.length)];
       } else {
         const last = queue[queue.length - 1] || nowT;
@@ -214,7 +233,7 @@
   }
 
   function renderQueue() {
-    $('qlabel').textContent = currentSlot().label;
+    $('qlabel').textContent = currentSlot().label + (activeSeason() ? ' · ' + (activeSeason().label || 'christmas') : '');
     const rows = (nowT ? [nowT] : []).concat(queue);
     $('q').innerHTML = rows.map((t, i) =>
       `<li data-i="${i - (nowT ? 1 : 0)}" class="${nowT && i === 0 ? 'now' : ''}"><img src="${esc(artOf(t))}" alt="" loading="lazy">` +
