@@ -733,5 +733,370 @@
     "to": "12-25",
     "share": 0.75,
     "note": "11/18 17시 코치님: Stable Audio 크리스마스 12곡 삭제(트로트 느낌). 시즌 곡 다시 넣을 때 track.season=\"xmas\". 12/26 자동 종료"
+  },
+  "yt": {
+    "list": "PLVC_JJxL4LkY",
+    "label": "christmas at the bar",
+    "from": "2026-11-18T17:00:00+09:00",
+    "until": "2026-11-19T04:00:00+09:00",
+    "shuffle": false,
+    "note_start": "오늘은 크리스마스 플레이리스트 · 59곡 · 약 3시간 14분 · 끝나면 처음부터 반복",
+    "note": "11/18 코치님 요청 임시 모드. 유튜브 tapping; 채널 일부공개 재생목록(공식 영상만 임베드, 원곡 파일 업로드 없음). until 지나거나 이 yt 블록을 지우면 자체곡으로 자동 복귀.",
+    "items": [
+      {
+        "id": "g8UmqvOqB1A",
+        "a": "Nat King Cole",
+        "t": "The Christmas Song",
+        "set": 1
+      },
+      {
+        "id": "CBL5iglpY-I",
+        "a": "Vince Guaraldi Trio",
+        "t": "Christmas Time Is Here (Instrumental)",
+        "set": 1
+      },
+      {
+        "id": "QJ5DOWPGxwg",
+        "a": "Michael Bublé",
+        "t": "It's Beginning to Look a Lot Like Christmas",
+        "set": 1
+      },
+      {
+        "id": "0iFK2NiyvDg",
+        "a": "Norah Jones",
+        "t": "Christmas Calling (Jolly Jones)",
+        "set": 1
+      },
+      {
+        "id": "QcGW4aQNA9k",
+        "a": "Diana Krall",
+        "t": "Jingle Bells",
+        "set": 1
+      },
+      {
+        "id": "n4oP0DhTpyQ",
+        "a": "Frank Sinatra",
+        "t": "Have Yourself a Merry Little Christmas",
+        "set": 1
+      },
+      {
+        "id": "F8qCETX7OhM",
+        "a": "Laufey",
+        "t": "Christmas Magic",
+        "set": 1
+      },
+      {
+        "id": "6zBznSJjSGE",
+        "a": "Ella Fitzgerald",
+        "t": "Let It Snow! Let It Snow! Let It Snow!",
+        "set": 1
+      },
+      {
+        "id": "icIWLaZeXR4",
+        "a": "Vince Guaraldi Trio",
+        "t": "Linus and Lucy",
+        "set": 1
+      },
+      {
+        "id": "xrxvHpKI9-0",
+        "a": "Donny Hathaway",
+        "t": "This Christmas",
+        "set": 1
+      },
+      {
+        "id": "E8gmARGvPlI",
+        "a": "Wham!",
+        "t": "Last Christmas",
+        "set": 1
+      },
+      {
+        "id": "Mk_GmhD053E",
+        "a": "Eartha Kitt",
+        "t": "Santa Baby",
+        "set": 1
+      },
+      {
+        "id": "2TA3IKH8Y5c",
+        "a": "Dean Martin",
+        "t": "Let It Snow! Let It Snow! Let It Snow!",
+        "set": 1
+      },
+      {
+        "id": "1IZveO__xgk",
+        "a": "Ella Fitzgerald",
+        "t": "Winter Wonderland",
+        "set": 1
+      },
+      {
+        "id": "bXlk2q_kt3I",
+        "a": "Mariah Carey",
+        "t": "All I Want for Christmas Is You",
+        "set": 1
+      },
+      {
+        "id": "zvPb0DVveHU",
+        "a": "Stevie Wonder",
+        "t": "Someday at Christmas",
+        "set": 2
+      },
+      {
+        "id": "XtB0LqyJsdA",
+        "a": "Michael Bublé",
+        "t": "Cold December Night",
+        "set": 2
+      },
+      {
+        "id": "jnXxxKZ57Tw",
+        "a": "Ariana Grande",
+        "t": "Santa Tell Me",
+        "set": 2
+      },
+      {
+        "id": "19M7FIx3BOE",
+        "a": "태연 (TAEYEON)",
+        "t": "This Christmas",
+        "set": 2
+      },
+      {
+        "id": "uSjq7x67kzM",
+        "a": "Chris Rea",
+        "t": "Driving Home for Christmas",
+        "set": 2
+      },
+      {
+        "id": "4EvZOXEoJ84",
+        "a": "Darlene Love",
+        "t": "Christmas (Baby Please Come Home)",
+        "set": 2
+      },
+      {
+        "id": "LSk92CGr_yw",
+        "a": "Norah Jones",
+        "t": "Christmas Don't Be Late",
+        "set": 2
+      },
+      {
+        "id": "TFsZy9t-qDc",
+        "a": "Brenda Lee",
+        "t": "Rockin' Around the Christmas Tree",
+        "set": 2
+      },
+      {
+        "id": "gset79KMmt0",
+        "a": "Sia",
+        "t": "Snowman",
+        "set": 2
+      },
+      {
+        "id": "AN_R4pR1hck",
+        "a": "Andy Williams",
+        "t": "It's the Most Wonderful Time of the Year",
+        "set": 2
+      },
+      {
+        "id": "h0b4nw7NDhA",
+        "a": "EXO",
+        "t": "첫 눈 (The First Snow)",
+        "set": 2
+      },
+      {
+        "id": "yBlm6moD-gA",
+        "a": "Louis Armstrong",
+        "t": "'Zat You, Santa Claus?",
+        "set": 2
+      },
+      {
+        "id": "YfF10ow4YEo",
+        "a": "Kelly Clarkson",
+        "t": "Underneath the Tree",
+        "set": 2
+      },
+      {
+        "id": "7qnUm2RthCE",
+        "a": "Vince Guaraldi Trio",
+        "t": "Skating",
+        "set": 2
+      },
+      {
+        "id": "LUjn3RpkcKY",
+        "a": "Justin Bieber",
+        "t": "Mistletoe",
+        "set": 2
+      },
+      {
+        "id": "v5ryZdpEHqM",
+        "a": "Bing Crosby",
+        "t": "White Christmas",
+        "set": 2
+      },
+      {
+        "id": "2TfWo3GsIII",
+        "a": "Paul McCartney",
+        "t": "Wonderful Christmastime",
+        "set": 2
+      },
+      {
+        "id": "Dkq3LD-4pmM",
+        "a": "Michael Bublé",
+        "t": "Holly Jolly Christmas",
+        "set": 2
+      },
+      {
+        "id": "SqVtqbzTdVs",
+        "a": "Chuck Berry",
+        "t": "Run Rudolph Run",
+        "set": 2
+      },
+      {
+        "id": "Kr_zo8ivUCY",
+        "a": "Frank Sinatra",
+        "t": "The Christmas Waltz",
+        "set": 3
+      },
+      {
+        "id": "aBpYk9vuneE",
+        "a": "Bleachers",
+        "t": "Merry Christmas, Please Don't Call",
+        "set": 3
+      },
+      {
+        "id": "B6WnnZRSKYs",
+        "a": "Elvis Presley",
+        "t": "Blue Christmas",
+        "set": 3
+      },
+      {
+        "id": "w14rSMl35ro",
+        "a": "아이유 (IU)",
+        "t": "미리 메리 크리스마스 (feat. 천둥)",
+        "set": 3
+      },
+      {
+        "id": "XZTzai1H9DM",
+        "a": "The Ronettes",
+        "t": "Sleigh Ride",
+        "set": 3
+      },
+      {
+        "id": "mN3rDTAdM2o",
+        "a": "Taylor Swift",
+        "t": "Christmas Tree Farm",
+        "set": 3
+      },
+      {
+        "id": "UwY0VjJUzXQ",
+        "a": "Dean Martin",
+        "t": "Baby, It's Cold Outside",
+        "set": 3
+      },
+      {
+        "id": "Nx-DvH41Tjo",
+        "a": "Michael Bublé",
+        "t": "Jingle Bells (feat. The Puppini Sisters)",
+        "set": 3
+      },
+      {
+        "id": "s_eCNuHS6kk",
+        "a": "Sabrina Carpenter",
+        "t": "A Nonsense Christmas",
+        "set": 3
+      },
+      {
+        "id": "nYmPZrvThW8",
+        "a": "The Jackson 5",
+        "t": "Santa Claus Is Coming to Town",
+        "set": 3
+      },
+      {
+        "id": "N8NcQzMQN_U",
+        "a": "José Feliciano",
+        "t": "Feliz Navidad",
+        "set": 3
+      },
+      {
+        "id": "z1rYmzQ8C9Q",
+        "a": "Coldplay",
+        "t": "Christmas Lights",
+        "set": 3
+      },
+      {
+        "id": "JkRKxxLiDNI",
+        "a": "성시경·박효신·이석훈·서인국·빅스",
+        "t": "크리스마스니까",
+        "set": 3
+      },
+      {
+        "id": "279VzBwpx1Q",
+        "a": "Bobby Helms",
+        "t": "Jingle Bell Rock",
+        "set": 3
+      },
+      {
+        "id": "KK_IvzPLBPQ",
+        "a": "Bing Crosby",
+        "t": "I'll Be Home for Christmas",
+        "set": 3
+      },
+      {
+        "id": "uA4STm4hx7Q",
+        "a": "Gwen Stefani",
+        "t": "You Make It Feel Like Christmas (ft. Blake Shelton)",
+        "set": 3
+      },
+      {
+        "id": "Q_yuO8UNGmY",
+        "a": "Ed Sheeran & Elton John",
+        "t": "Merry Christmas",
+        "set": 3
+      },
+      {
+        "id": "oZ5cmrz-mrU",
+        "a": "Andy Williams",
+        "t": "Happy Holiday / The Holiday Season",
+        "set": 3
+      },
+      {
+        "id": "8gWHlHWIaRQ",
+        "a": "John Lennon & Yoko Ono",
+        "t": "Happy Xmas (War Is Over)",
+        "set": 3
+      },
+      {
+        "id": "uoMHmsL2t3A",
+        "a": "Elton John",
+        "t": "Step Into Christmas",
+        "set": 3
+      },
+      {
+        "id": "X2LcVwRfH-w",
+        "a": "Shakin' Stevens",
+        "t": "Merry Christmas Everyone",
+        "set": 3
+      },
+      {
+        "id": "yVLxRXoLaas",
+        "a": "EXO",
+        "t": "12월의 기적 (Miracles in December)",
+        "set": 3
+      },
+      {
+        "id": "chEjjz6pezI",
+        "a": "Kacey Musgraves",
+        "t": "Ribbons and Bows",
+        "set": 3
+      },
+      {
+        "id": "p597VDvsekc",
+        "a": "Ella Fitzgerald",
+        "t": "What Are You Doing New Year's Eve?",
+        "set": 3
+      },
+      {
+        "id": "YLdTU25vsVo",
+        "a": "Vince Guaraldi Trio",
+        "t": "O Tannenbaum",
+        "set": 3
+      }
+    ]
   }
 }

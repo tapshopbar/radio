@@ -77,6 +77,10 @@
   #start b{font-size:20px}
   #start p{color:var(--sub);font-size:14px;text-align:center;line-height:1.6}
   .hidden{display:none!important}
+  /* 임시 유튜브 모드 (tracks.json yt): 표지 자리에 공식 영상 플레이어 */
+  #ytwrap{width:min(100%,calc((100vh - 220px) * 16 / 9));aspect-ratio:16/9;border-radius:6px;overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,.6);background:#000}
+  #ytwrap iframe{width:100%;height:100%;border:0;display:block}
+  @media (max-width:900px){#ytwrap{width:100%;max-width:820px}}
   /* 태블릿·모바일: 한 줄로 쌓기 (표지 → 곡 정보·조작 → 볼륨 → 다음 곡) */
   @media (max-width:900px){
     html,body{height:auto}
@@ -166,6 +170,71 @@
   const normGain = t => Math.min(Math.pow(10, (TARGET - (t.lufs ?? DEFAULT_LUFS)) / 20), Math.pow(10, MAX_BOOST_DB / 20)) * (t.gain || 1);
   const fmt = s => isFinite(s) ? Math.floor(s / 60) + ':' + String(Math.floor(s % 60)).padStart(2, '0') : '0:00';
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  // 임시 유튜브 모드 (11/18 코치님: 오늘 하루 인기 크리스마스 곡). tracks.json yt {list, until, label, items[{id,a,t}]}.
+  // 원곡 파일은 저장소에 올리지 않고 유튜브 공식 영상 재생목록만 임베드. 끝내기 = tracks.json에서 yt 삭제(또는 until 지남) → 자체곡으로 자동 복귀.
+  let ytp = null, ytOn = false, ytShuf = false, ytTimer = null;
+  const ytActive = () => { const y = lib.yt, n = Date.now(); return y && y.list && (!y.until || n < Date.parse(y.until)) && (!y.from || n >= Date.parse(y.from)) ? y : null; };
+  const ytItem = id => ((lib.yt && lib.yt.items) || []).find(x => x.id === id);
+  function ytApi() {
+    return new Promise(res => {
+      if (window.YT && YT.Player) return res();
+      window.onYouTubeIframeAPIReady = res;
+      const s = document.createElement('script'); s.src = 'https://www.youtube.com/iframe_api'; document.head.appendChild(s);
+    });
+  }
+  function ytRender() {
+    if (!ytp || !ytp.getPlaylist) return;
+    const y = lib.yt || {}, pl = ytp.getPlaylist() || [], i = Math.max(0, ytp.getPlaylistIndex());
+    const cur = pl[i], it = ytItem(cur), vd = (ytp.getVideoData && ytp.getVideoData()) || {};
+    $('slot').textContent = y.label || 'christmas';
+    $('title').textContent = it ? it.t : (vd.title || '크리스마스');
+    $('sub').textContent = it ? it.a : (vd.author || '');
+    $('qlabel').textContent = (y.label || 'christmas') + ' · ' + (i + 1) + ' / ' + pl.length;
+    const rows = [];
+    for (let k = 0; k <= QLEN && k < pl.length; k++) { const id = pl[(i + k) % pl.length], x = ytItem(id); rows.push({ id, x, now: k === 0 }); }
+    $('q').innerHTML = rows.map(r => `<li data-v="${esc(r.id)}" class="${r.now ? 'now' : ''}"><img src="https://i.ytimg.com/vi/${esc(r.id)}/mqdefault.jpg" alt="" loading="lazy">` +
+      `<div class="t"><b>${esc(r.x ? r.x.t : r.id)}</b><span>${r.now ? '지금 재생 중' : esc(r.x ? r.x.a : '')}</span></div></li>`).join('');
+  }
+  async function ytStart() {
+    const y = ytActive(); if (!y) return;
+    ytOn = true;
+    decks.forEach(d => { try { d.a.pause(); } catch (e) {} });
+    $('start').classList.add('hidden');
+    $('art').classList.add('hidden');
+    let w = $('ytwrap');
+    if (!w) { w = document.createElement('div'); w.id = 'ytwrap'; w.innerHTML = '<div id="ytbox"></div>'; document.querySelector('.art').appendChild(w); }
+    $('glow').style.backgroundImage = 'none';
+    await ytApi();
+    ytShuf = !!y.shuffle;
+    $('shuf').classList.toggle('on', ytShuf);
+    ytp = new YT.Player('ytbox', {
+      width: '100%', height: '100%',
+      playerVars: { listType: 'playlist', list: y.list, autoplay: 1, playsinline: 1, rel: 0, loop: 1 },
+      events: {
+        onReady: e => { e.target.setLoop(true); if (ytShuf) e.target.setShuffle(true); e.target.setVolume(+$('vol').value); e.target.playVideo(); playing = true; setPP(); keepAwake(); ytRender(); },
+        onStateChange: e => { if (e.data === 1) { playing = true; setPP(); } else if (e.data === 2) { playing = false; setPP(); } ytRender(); },
+        onError: () => setTimeout(() => { if (ytp) ytp.nextVideo(); }, 1500)
+      }
+    });
+    clearInterval(ytTimer);
+    ytTimer = setInterval(() => {
+      if (!ytp || !ytp.getDuration) return;
+      const c = ytp.getCurrentTime() || 0, D = ytp.getDuration() || 0;
+      if (D && !seeking) { $('seek').value = Math.round(1000 * c / D); setP($('seek'), c / D); }
+      $('tcur').textContent = $('tcur2').textContent = fmt(c);
+      $('tdur').textContent = $('tdur2').textContent = fmt(D);
+    }, 1000);
+  }
+  function ytStop() {
+    clearInterval(ytTimer);
+    try { if (ytp) ytp.destroy(); } catch (e) {}
+    ytp = null; ytOn = false;
+    const w = $('ytwrap'); if (w) w.remove();
+    $('art').classList.remove('hidden');
+    $('shuf').classList.toggle('on', shuffle);
+    if (ctx) { ctx.resume(); playing = true; setPP(); advancing = false; advance(); } else start();
+  }
 
   async function loadLib() {
     try {
@@ -346,6 +415,7 @@
   }
 
   async function start() {
+    if (ytActive()) return ytStart();
     ctx = new (window.AudioContext || window.webkitAudioContext)();
     master = makeMaster();
     decks = [makeDeck(), makeDeck()];
@@ -362,6 +432,7 @@
     $('vol').value = v; setP($('vol'), v / 100); $('vtxt').textContent = v;
     localStorage.setItem('tsbVol', v);
     if (master) master.vol.gain.setTargetAtTime(v / 100, ctx.currentTime, 0.05);
+    if (ytp && ytp.setVolume) ytp.setVolume(v);
   };
   setVol(+(localStorage.getItem('tsbVol') ?? 100));
   $('vol').oninput = e => setVol(+e.target.value);
@@ -369,25 +440,30 @@
   $('vup').onclick = () => setVol(+$('vol').value + 10);
 
   $('go').onclick = start;
-  $('next').onclick = () => { if (ctx) { advancing = false; advance(); } };
-  $('prev').onclick = () => { if (ctx) back(); };
+  $('next').onclick = () => { if (ytOn) { if (ytp) ytp.nextVideo(); return; } if (ctx) { advancing = false; advance(); } };
+  $('prev').onclick = () => { if (ytOn) { if (ytp) ytp.previousVideo(); return; } if (ctx) back(); };
   $('pp').onclick = async () => {
+    if (ytOn) { if (ytp) { if (ytp.getPlayerState() === 1) ytp.pauseVideo(); else ytp.playVideo(); } return; }
     if (!ctx) return start();
     if (playing) await ctx.suspend(); else await ctx.resume();
     playing = !playing; setPP();
   };
   $('shuf').onclick = () => {
+    if (ytOn) { ytShuf = !ytShuf; if (ytp) ytp.setShuffle(ytShuf); $('shuf').classList.toggle('on', ytShuf); setTimeout(ytRender, 300); return; }
     shuffle = !shuffle; localStorage.setItem('tsbShuffle', shuffle ? '1' : '0');
     $('shuf').classList.toggle('on', shuffle); queue = []; fillQueue();
   };
   $('shuf').classList.toggle('on', shuffle);
   $('q').onclick = e => {
-    const li = e.target.closest('li'); if (!li || !ctx) return;
+    const li = e.target.closest('li'); if (!li) return;
+    if (ytOn) { if (ytp && li.dataset.v) { const k = ytp.getPlaylist().indexOf(li.dataset.v); if (k >= 0) ytp.playVideoAt(k); } return; }
+    if (!ctx) return;
     const i = +li.dataset.i; if (i < 0) return;
     const [t] = queue.splice(i, 1); advancing = false; playTrack(t); fillQueue();
   };
   $('seek').oninput = e => { seeking = true; setP(e.target, e.target.value / 1000); };
   $('seek').onchange = e => {
+    if (ytOn) { seeking = false; if (ytp && ytp.getDuration()) ytp.seekTo(ytp.getDuration() * e.target.value / 1000, true); return; }
     const d = decks[cur]; seeking = false;
     if (d && d.a.duration) d.a.currentTime = Math.min(d.a.duration - FADE - 1, d.a.duration * e.target.value / 1000);
   };
@@ -400,6 +476,17 @@
   function tick() {
     const d = new Date();
     $('clock').textContent = d.toTimeString().slice(0, 5);
+    const y = ytActive();
+    if (ytOn) { if (!y) ytStop(); else ytRender(); return; }
+    if (y && ctx) { ytStart(); return; }
+    if (y) {
+      $('slot').textContent = y.label || 'christmas';
+      $('start').querySelector('p').innerHTML = esc(y.note_start || '오늘은 크리스마스 플레이리스트가 나옵니다');
+      $('title').textContent = y.label || 'christmas';
+      $('qlabel').textContent = (y.label || 'christmas') + ' · ' + ((y.items || []).length) + '곡';
+      $('q').innerHTML = (y.items || []).slice(0, QLEN + 1).map(x => `<li><img src="https://i.ytimg.com/vi/${esc(x.id)}/mqdefault.jpg" alt="" loading="lazy"><div class="t"><b>${esc(x.t)}</b><span>${esc(x.a)}</span></div></li>`).join('');
+      return;
+    }
     $('slot').textContent = currentSlot().label;
     fillQueue();
   }
