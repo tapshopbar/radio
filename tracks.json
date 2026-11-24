@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-22",
   "slots": [
     {
       "id": "day",
@@ -724,6 +724,36 @@
       "suno": "창문에 쓴 이름 · your name on the window (v6, English 80s synth-pop ballad 84 BPM, TSB radio · autumn voice)",
       "added": "2026-11-08",
       "lufs": -14.9
+    },
+    {
+      "id": "2026-11-18-by-the-fireside",
+      "title": "난롯가 · by the fireside",
+      "file": "music/by-the-fireside.m4a",
+      "playlists": [
+        "wine",
+        "weekend",
+        "friends"
+      ],
+      "gain": 1,
+      "suno": "난롯가 · by the fireside (v6, christmas piano trio + celesta, 104 BPM, 3:30, v1 8b82a19d)",
+      "added": "2026-11-22",
+      "bpm": 104,
+      "season": "xmas"
+    },
+    {
+      "id": "2026-11-18-winter-bus-stop",
+      "title": "겨울 정류장 · winter bus stop",
+      "file": "music/winter-bus-stop.m4a",
+      "playlists": [
+        "wine",
+        "weekend",
+        "study"
+      ],
+      "gain": 1,
+      "suno": "겨울 정류장 · winter bus stop (v6, hollowbody jazz guitar trio + low organ, 106 BPM, 3:30, v1 8c46a464)",
+      "added": "2026-11-22",
+      "bpm": 106,
+      "season": "xmas"
     }
   ],
   "season": {
