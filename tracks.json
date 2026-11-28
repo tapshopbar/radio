@@ -820,6 +820,198 @@
       "bpm": 106,
       "season": "xmas",
       "lufs": -15.5
+    },
+    {
+      "id": "2026-11-16-snowfall-evening",
+      "title": "첫눈 오는 저녁 · snowfall evening",
+      "file": "music/snowfall-evening.m4a",
+      "playlists": [
+        "wine",
+        "alone",
+        "study"
+      ],
+      "gain": 1,
+      "suno": "첫눈 오는 저녁 · snowfall evening (v6, winter jazz piano trio + celesta, 102 BPM, 3:30, v1 601728bd)",
+      "added": "2026-11-28",
+      "bpm": 102,
+      "season": "xmas",
+      "lufs": -16.2
+    },
+    {
+      "id": "2026-11-16-wool-by-the-window",
+      "title": "창가의 털실 · wool by the window",
+      "file": "music/wool-by-the-window.m4a",
+      "playlists": [
+        "wine",
+        "weekend",
+        "study"
+      ],
+      "gain": 1,
+      "suno": "창가의 털실 · wool by the window (v6, nylon guitar + vibraphone winter bossa, 106 BPM, 3:30, v1 50738a1a)",
+      "added": "2026-11-28",
+      "bpm": 106,
+      "season": "xmas",
+      "lufs": -15.8
+    },
+    {
+      "id": "2026-11-16-winter-lamplight",
+      "title": "겨울 저녁 등불 · winter lamplight",
+      "file": "music/winter-lamplight.m4a",
+      "playlists": [
+        "wine",
+        "friends",
+        "alone"
+      ],
+      "gain": 1,
+      "suno": "겨울 저녁 등불 · winter lamplight (v6, muted trumpet + Rhodes lounge quartet, 100 BPM, 3:30, v1 a18c4a70)",
+      "added": "2026-11-28",
+      "bpm": 100,
+      "season": "xmas",
+      "lufs": -15.1
+    },
+    {
+      "id": "2026-11-18-silver-windowsill",
+      "title": "은빛 창틀 · silver windowsill",
+      "file": "music/silver-windowsill.m4a",
+      "playlists": [
+        "wine",
+        "weekend",
+        "focus"
+      ],
+      "gain": 1,
+      "suno": "은빛 창틀 · silver windowsill (v6, Wurlitzer + vibraphone lounge bossa, 100 BPM, 3:30, v1 d20a3648)",
+      "added": "2026-11-28",
+      "bpm": 100,
+      "season": "xmas",
+      "lufs": -15.5
+    },
+    {
+      "id": "2026-11-20-winter-cello",
+      "title": "겨울 첼로 · winter cello",
+      "file": "music/winter-cello.m4a",
+      "playlists": [
+        "wine",
+        "alone",
+        "focus"
+      ],
+      "gain": 1,
+      "suno": "겨울 첼로 · winter cello (v6, cello + piano chamber jazz, 100 BPM, 3:30, v1 a669f33d)",
+      "added": "2026-11-28",
+      "bpm": 100,
+      "season": "xmas",
+      "lufs": -15.3
+    },
+    {
+      "id": "2026-11-20-winter-walk-bass",
+      "title": "겨울 베이스 · winter walk bass",
+      "file": "music/winter-walk-bass.m4a",
+      "playlists": [
+        "wine",
+        "friends",
+        "weekend"
+      ],
+      "gain": 1,
+      "suno": "겨울 베이스 · winter walk bass (v6, upright bass lead jazz trio, 102 BPM, 3:30, v1 77a44e81)",
+      "added": "2026-11-28",
+      "bpm": 102,
+      "season": "xmas",
+      "lufs": -15.2
+    },
+    {
+      "id": "2026-11-24-woodsmoke",
+      "title": "장작 냄새 · woodsmoke",
+      "file": "music/woodsmoke.m4a",
+      "playlists": [
+        "wine",
+        "friends",
+        "weekend"
+      ],
+      "gain": 1,
+      "suno": "장작 냄새 · woodsmoke (v6, Hammond organ trio + hollowbody guitar, 104 BPM, 3:30, v1 c75aff60)",
+      "added": "2026-11-28",
+      "bpm": 104,
+      "season": "xmas",
+      "lufs": -15.2
+    },
+    {
+      "id": "2026-11-24-little-music-box",
+      "title": "작은 오르골 · little music box",
+      "file": "music/little-music-box.m4a",
+      "playlists": [
+        "wine",
+        "alone",
+        "study"
+      ],
+      "gain": 1,
+      "suno": "작은 오르골 · little music box (v6, felt piano + celesta duo, 100 BPM, 3:30, v1 632e70ab)",
+      "added": "2026-11-28",
+      "bpm": 100,
+      "season": "xmas",
+      "lufs": -16.1
+    },
+    {
+      "id": "2026-11-28-snowy-bookshop",
+      "title": "눈 오는 서점 · snowy bookshop",
+      "file": "music/snowy-bookshop.m4a",
+      "playlists": [
+        "wine",
+        "friends",
+        "weekend"
+      ],
+      "gain": 1,
+      "suno": "눈 오는 서점 · snowy bookshop (v6, subtone alto sax quartet, 102 BPM, 3:30, v1 8772cfa1)",
+      "added": "2026-11-28",
+      "bpm": 102,
+      "season": "xmas",
+      "lufs": -14.5
+    },
+    {
+      "id": "2026-11-28-winter-tangerines",
+      "title": "겨울 귤 · winter tangerines",
+      "file": "music/winter-tangerines.m4a",
+      "playlists": [
+        "wine",
+        "weekend",
+        "study"
+      ],
+      "gain": 1,
+      "suno": "겨울 귤 · winter tangerines (v6, Wurlitzer + nylon guitar winter bossa, 106 BPM, 3:30, v1 6bab9539)",
+      "added": "2026-11-28",
+      "bpm": 106,
+      "season": "xmas",
+      "lufs": -15.1
+    },
+    {
+      "id": "2026-11-28-night-train-in-the-snow",
+      "title": "눈 속의 밤 기차 · night train in the snow",
+      "file": "music/night-train-in-the-snow.m4a",
+      "playlists": [
+        "wine",
+        "friends",
+        "alone"
+      ],
+      "gain": 1,
+      "suno": "눈 속의 밤 기차 · night train in the snow (v6, muted trumpet + vibraphone lounge jazz, 104 BPM, 3:30, v1 d8e6a324)",
+      "added": "2026-11-28",
+      "bpm": 104,
+      "season": "xmas",
+      "lufs": -15.6
+    },
+    {
+      "id": "2026-11-28-the-night-before-the-eve",
+      "title": "이브 전날 밤 · the night before the eve",
+      "file": "music/the-night-before-the-eve.m4a",
+      "playlists": [
+        "wine",
+        "alone",
+        "focus"
+      ],
+      "gain": 1,
+      "suno": "이브 전날 밤 · the night before the eve (v6, felt piano + string pizzicato + cello, 100 BPM, 3:30, v1 cdcc1746)",
+      "added": "2026-11-28",
+      "bpm": 100,
+      "season": "xmas",
+      "lufs": -15.8
     }
   ],
   "season": {
@@ -828,7 +1020,7 @@
     "from": "11-18",
     "to": "12-25",
     "share": 0.75,
-    "note": "11/18 17시 코치님: Stable Audio 크리스마스 12곡 삭제(트로트 느낌). 시즌 곡 다시 넣을 때 track.season=\"xmas\". 12/26 자동 종료"
+    "note": "11/18 17시 코치님: Stable Audio 크리스마스 12곡 삭제(트로트 느낌). 시즌 곡 다시 넣을 때 track.season=\"xmas\". 12/26 자동 종료. 11/28 Suno 크리스마스 BGM 12곡 추가(총 18곡)."
   },
   "yt": {
     "list": "PLVC_JJxL4LkY",
