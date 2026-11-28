@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-22",
+  "updated": "2026-11-28",
   "slots": [
     {
       "id": "day",
@@ -756,6 +756,70 @@
       "bpm": 106,
       "season": "xmas",
       "lufs": -15.9
+    },
+    {
+      "id": "2026-11-24-frosted-glass",
+      "title": "성에 낀 유리 · frosted glass",
+      "file": "music/frosted-glass.m4a",
+      "playlists": [
+        "wine",
+        "alone",
+        "study"
+      ],
+      "gain": 1,
+      "suno": "성에 낀 유리 · frosted glass (v6, christmas jazz quartet, low clarinet, 102 BPM, 3:30, v1 23545579)",
+      "added": "2026-11-28",
+      "bpm": 102,
+      "season": "xmas",
+      "lufs": -15.4
+    },
+    {
+      "id": "2026-11-24-winter-post-office",
+      "title": "겨울 우체국 · winter post office",
+      "file": "music/winter-post-office.m4a",
+      "playlists": [
+        "wine",
+        "weekend",
+        "friends"
+      ],
+      "gain": 1,
+      "suno": "겨울 우체국 · winter post office (v6, muted flugelhorn + Rhodes lounge jazz, 106 BPM, 3:30, v1 86bc923f)",
+      "added": "2026-11-28",
+      "bpm": 106,
+      "season": "xmas",
+      "lufs": -14.9
+    },
+    {
+      "id": "2026-11-20-snow-on-the-harp",
+      "title": "하프 위의 눈 · snow on the harp",
+      "file": "music/snow-on-the-harp.m4a",
+      "playlists": [
+        "wine",
+        "alone",
+        "focus"
+      ],
+      "gain": 1,
+      "suno": "하프 위의 눈 · snow on the harp (v6, harp + piano lounge, celesta, 104 BPM, 3:30, v1 dd8c29a5)",
+      "added": "2026-11-28",
+      "bpm": 104,
+      "season": "xmas",
+      "lufs": -14.7
+    },
+    {
+      "id": "2026-11-20-snowy-terrace",
+      "title": "눈 내린 테라스 · snowy terrace",
+      "file": "music/snowy-terrace.m4a",
+      "playlists": [
+        "wine",
+        "weekend",
+        "friends"
+      ],
+      "gain": 1,
+      "suno": "눈 내린 테라스 · snowy terrace (v6, alto flute winter bossa, 106 BPM, 3:30, v1 711239d8)",
+      "added": "2026-11-28",
+      "bpm": 106,
+      "season": "xmas",
+      "lufs": -15.5
     }
   ],
   "season": {
